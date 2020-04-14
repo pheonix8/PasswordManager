@@ -29,15 +29,12 @@ public class Compilation {
         allApplications.remove(index);
     }
 
+    public void createfile(){
+
+    }
+
     public void readfile(){
 
     }
 
-    public void writefile(){
-
-    }
-
-    public void deletefile(){
-
-    }
 }
