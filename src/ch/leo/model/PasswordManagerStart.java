@@ -14,10 +14,15 @@ public class PasswordManagerStart {
 
         Types types = new Types();
 
-        types.readfile();
+        Compilation compilation = new Compilation();
         
-        types.createfile();
+        types.readfile();
 
+        compilation.readfile();
+
+        compilation.createfile();
+
+        types.createfile();
 
     }
 }

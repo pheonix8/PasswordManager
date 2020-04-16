@@ -12,9 +12,9 @@ public class Application {
     private String username;
     private String application;
     private String email;
-    private Type type;
+    private int type;
 
-    public Application(String password, String username, String application, String email, Type type) {
+    public Application(String password, String username, String application, String email, int type) {
         this.password = password;
         this.username = username;
         this.application = application;
@@ -54,11 +54,20 @@ public class Application {
         this.email = email;
     }
 
-    public Type getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(int type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "" + password + ","
+                + username + ","
+                + application + ","
+                + email + ","
+                + type;
     }
 }

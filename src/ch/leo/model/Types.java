@@ -24,9 +24,14 @@ public class Types {
         types.add(type);
     }
 
-    public int getType(int index){
-        types.get(index);
-        return index;
+    public int getIndexOfType(Type type){
+        return types.indexOf(type);
+    }
+
+    public Type getType(int index){
+
+        return types.get(index);
+
     }
 
     public void removeType(int index){
@@ -86,5 +91,6 @@ public class Types {
     public String toString() {
         return "" + types;
     }
+
 }
 

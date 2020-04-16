@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="" />
+    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="Type create and read file build">
+      <change afterPath="$PROJECT_DIR$/AllApplications_passwords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Types.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Types.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/PasswordManagerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/PasswordManagerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Types.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="pheonix8 &lt;61965711+pheonix8@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1aTvOJrJBEUJxJyZjy3eHTyyPGF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -19,13 +46,58 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\src\ch\leo\view" />
+      <recent name="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\src\ch\leo\model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PasswordManagerStart">
+    <configuration name="PasswordManagerStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch.leo.model.PasswordManagerStart" />
+      <module name="PasswordManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.leo.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch.leo.model.Test" />
+      <module name="PasswordManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.leo.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PasswordManagerStart" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -37,25 +109,137 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586772365162</updated>
-      <workItem from="1586772367208" duration="242000" />
+      <workItem from="1586772367208" duration="1058000" />
+      <workItem from="1586856642802" duration="9969000" />
+      <workItem from="1587030515720" duration="32000" />
+      <workItem from="1587030558978" duration="8995000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit &#10;Model Classes &#10;one GUI">
+      <created>1586772663658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586772663658</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Type create and read file build">
+      <created>1586900720784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586900720784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit &#10;Model Classes &#10;one GUI" />
+    <MESSAGE value="Type create and read file build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Type create and read file build" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1071" y="304" key="CommitChangelistDialog2" timestamp="1586772582434">
+    <state x="872" y="358" key="#Project_Structure" timestamp="1587035420421">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1071" y="304" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1586772582434" />
-    <state x="1079" y="441" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1586772572578">
+    <state x="872" y="358" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1587035420421" />
+    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser" timestamp="1587032677270">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1079" y="441" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1586772572578" />
-    <state x="1616" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1586772368720">
+    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1587032677270" />
+    <state x="1339" y="439" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587030538934">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1616" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586772368720" />
+    <state x="1339" y="439" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587030538934" />
+    <state x="1071" y="304" key="CommitChangelistDialog2" timestamp="1587030592279">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1071" y="304" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1587030592279" />
+    <state x="0" y="0" key="DiffContextDialog" timestamp="1586773295778">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="0" y="0" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773295778" />
+    <state x="534" y="461" key="FileChooserDialogImpl" timestamp="1586773064009">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="534" y="461" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1586773064009" />
+    <state x="484" y="640" key="GitCloneDialog" timestamp="1586773071156">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="484" y="640" key="GitCloneDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773071156" />
+    <state width="1234" height="399" key="GridCell.Tab.0.bottom" timestamp="1587041604914">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587041604914" />
+    <state width="1234" height="399" key="GridCell.Tab.0.center" timestamp="1587041604914">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="399" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587041604914" />
+    <state width="1234" height="399" key="GridCell.Tab.0.left" timestamp="1587041604914">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="399" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587041604914" />
+    <state width="1234" height="399" key="GridCell.Tab.0.right" timestamp="1587041604914">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="399" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587041604914" />
+    <state width="1234" height="490" key="GridCell.Tab.1.bottom" timestamp="1587038128921">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="490" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587038128921" />
+    <state width="1234" height="490" key="GridCell.Tab.1.center" timestamp="1587038128921">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="490" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587038128921" />
+    <state width="1234" height="490" key="GridCell.Tab.1.left" timestamp="1587038128921">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="490" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587038128921" />
+    <state width="1234" height="490" key="GridCell.Tab.1.right" timestamp="1587038128921">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1234" height="490" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587038128921" />
+    <state x="220" y="446" key="IDE.errors.dialog" timestamp="1587037950751">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="220" y="446" key="IDE.errors.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587037950751" />
+    <state x="419" y="418" key="NewModule_or_Project.wizard" timestamp="1586773095473">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="419" y="418" key="NewModule_or_Project.wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1586773095473" />
+    <state x="255" y="361" key="SettingsEditor" timestamp="1586773367957">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="255" y="361" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1586773367957" />
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1586900724791">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1586900724791" />
+    <state x="1616" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1587030559282">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1616" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587030559282" />
+    <state x="662" y="320" key="new project wizard" timestamp="1587034733492">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="662" y="320" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1587034733492" />
+    <state x="417" y="338" width="672" height="678" key="search.everywhere.popup" timestamp="1586860754076">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="417" y="338" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1586860754076" />
   </component>
 </project>
