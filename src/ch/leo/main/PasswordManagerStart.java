@@ -1,4 +1,7 @@
-package ch.leo.model;
+package ch.leo.main;
+
+import ch.leo.model.*;
+import ch.leo.view.*;
 
 
 /**
@@ -11,6 +14,8 @@ package ch.leo.model;
 public class PasswordManagerStart {
 
     public static void main(String[] args) {
+
+        PasswortmanagerGUI passwortmanagerGUI = new PasswortmanagerGUI();
 
         Types types = new Types();
 
