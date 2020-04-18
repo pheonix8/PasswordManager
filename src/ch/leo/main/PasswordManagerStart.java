@@ -3,6 +3,8 @@ package ch.leo.main;
 import ch.leo.model.*;
 import ch.leo.view.*;
 
+import javax.swing.*;
+
 
 /**
  * Project PasswordManager
@@ -15,19 +17,11 @@ public class PasswordManagerStart {
 
     public static void main(String[] args) {
 
-        PasswortmanagerGUI passwortmanagerGUI = new PasswortmanagerGUI();
+        Compilation c = new Compilation();
+        Types t = new Types();
 
-        Types types = new Types();
-
-        Compilation compilation = new Compilation();
+        new DataInitialization(c,t);
         
-        types.readfile();
-
-        compilation.readfile();
-
-        compilation.createfile();
-
-        types.createfile();
 
     }
 }

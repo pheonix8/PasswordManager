@@ -18,37 +18,52 @@ public class SearchTabPanel extends JPanel {
     private JPanel searchUpperPanel;
     private JPanel searchLowerPanel;
 
-    private JComboBox<Type> programmType;
+    private JComboBox programmType;
 
     private JList<Application> applications;
     private JScrollPane listscrollpane;
 
     private JButton searchButton;
-    private JTextArea searchArea;
+    private JLabel searchArea;
     private JTextField searchfield;
 
-    public SearchTabPanel(LayoutManager layout, boolean isDoubleBuffered) {
-        super(layout, isDoubleBuffered);
+    public SearchTabPanel() {
 
         searchPanel = new JPanel();
         searchUpperPanel = new JPanel();
         searchLowerPanel = new JPanel();
 
-        programmType = new JComboBox<>();
+        programmType = new JComboBox();
 
         applications = new JList<>();
         listscrollpane = new JScrollPane();
 
         searchButton = new JButton("Suchen");
-        searchArea = new JTextArea("Passwort Anzeigen:");
+        searchArea = new JLabel("Passwort Anzeigen:");
         searchfield = new JTextField();
 
-        searchArea.setEditable(false);
-
         init();
+
+        setVisible(true);
     }
 
     private void init(){
+
+        add(searchPanel);
+
+        searchPanel.add(searchUpperPanel, BorderLayout.CENTER);
+
+        searchUpperPanel.add(programmType, BorderLayout.WEST);
+        searchUpperPanel.add(applications, BorderLayout.CENTER);
+
+        searchPanel.add(new JSeparator(SwingConstants.VERTICAL));
+
+        searchPanel.add(searchLowerPanel, BorderLayout.SOUTH);
+
+        searchLowerPanel.setLayout(new GridLayout(1,3));
+        searchLowerPanel.add(searchArea);
+        searchLowerPanel.add(searchfield);
+        searchLowerPanel.add(searchButton);
 
     }
 }

@@ -15,58 +15,86 @@ import java.awt.*;
 public class CreateTabPanel extends JPanel {
 
     private JPanel createPanel;
+
     private JPanel createLeftPanel;
+    private JPanel createLeftnorthPanel;
+
     private JPanel createRightPanel;
 
-    private JTextArea applicationArea;
+    private JLabel applicationArea;
     private JTextField applicationField;
 
-    private JTextArea usernameArea;
+    private JLabel usernameArea;
     private JTextField usernameField;
 
-    private JTextArea emailArea;
+    private JLabel emailArea;
     private JTextField emailField;
 
-    private JTextArea passwordArea;
+    private JLabel passwordArea;
     private JTextField passwordField;
 
     private JComboBox<Type> getProgrammType;
 
     private JButton createButton;
 
-    public CreateTabPanel(LayoutManager layout, boolean isDoubleBuffered) {
-        super(layout, isDoubleBuffered);
+    public CreateTabPanel() {
 
         createPanel = new JPanel();
+
         createLeftPanel = new JPanel();
+        createLeftnorthPanel = new JPanel();
+
         createRightPanel = new JPanel();
 
-        applicationArea = new JTextArea("Application:");
+        applicationArea = new JLabel("Application:");
         applicationField = new JTextField();
 
-        usernameArea = new JTextArea("Benutzername:");
+        usernameArea = new JLabel("Benutzername:");
         usernameField = new JTextField();
 
-        emailArea = new JTextArea("E-Mail:");
+        emailArea = new JLabel("E-Mail:");
         emailField = new JTextField();
 
-        passwordArea = new JTextArea("Passwort:");
+        passwordArea = new JLabel("Passwort:");
         passwordField = new JTextField();
 
         getProgrammType = new JComboBox<>();
 
         createButton = new JButton("Erstellen");
 
-        applicationArea.setEditable(false);
-        usernameArea.setEditable(false);
-        emailArea.setEditable(false);
-        passwordArea.setEditable(false);
-
         init();
+
+        setVisible(true);
 
     }
 
     private void init(){
+
+        add(createPanel);
+
+        createPanel.add(createLeftPanel, BorderLayout.WEST);
+
+        createLeftPanel.add(createLeftnorthPanel, BorderLayout.NORTH);
+
+        createLeftnorthPanel.setLayout(new GridLayout(4,2));
+
+        createLeftnorthPanel.add(applicationArea);
+        createLeftnorthPanel.add(applicationField);
+
+        createLeftnorthPanel.add(usernameArea);
+        createLeftnorthPanel.add(usernameField);
+
+        createLeftnorthPanel.add(emailArea);
+        createLeftnorthPanel.add(emailField);
+
+        createLeftnorthPanel.add(passwordArea);
+        createLeftnorthPanel.add(passwordField);
+
+        createLeftPanel.add(getProgrammType, BorderLayout.CENTER);
+
+        createPanel.add(createRightPanel, BorderLayout.EAST);
+
+        createRightPanel.add(createButton,BorderLayout.SOUTH);
 
     }
 }

@@ -13,19 +13,34 @@ import java.awt.*;
  */
 public class PasswortmanagerGUI extends JFrame {
 
+    private DefaultListModel<Application> applicationModel;
+    private DefaultComboBoxModel<ch.leo.model.Type> typeModel;
+
     private JTabbedPane tabs;
     private SearchTabPanel searchTab;
     private CreateTabPanel createTab;
     private EditDeleteTabPanel editDeleteTab;
 
-    public PasswortmanagerGUI(){
+    public PasswortmanagerGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<ch.leo.model.Type> typeModel){
 
         super("Passwordmanager");
 
+        this.applicationModel = applicationModel;
+        this.typeModel = typeModel;
+
         tabs = new JTabbedPane();
+        searchTab = new SearchTabPanel();
+        createTab = new CreateTabPanel();
+        editDeleteTab = new EditDeleteTabPanel(typeModel, applicationModel);
+
+        setMinimumSize(new Dimension(640,480));
+        setSize(640, 480);
+        setResizable(false);
 
         init();
+        pack();
 
+        setLocationByPlatform(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
@@ -34,9 +49,9 @@ public class PasswortmanagerGUI extends JFrame {
     private void init(){
 
         getContentPane().add(tabs);
-        tabs.addTab("Passwörter", searchTab);
-        tabs.addTab("Erstellen", createTab);
-        tabs.addTab("Bearbeiten/Löschen", editDeleteTab);
+        tabs.add("Passwörter", searchTab);
+        tabs.add("Erstellen", createTab);
+        tabs.add("Bearbeiten/Löschen", editDeleteTab);
 
     }
 

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="Model first Finish">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" afterDir="false" />
+    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AllApplications_passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AllApplications_passwords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/PasswordManagerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,9 @@
       <workItem from="1587030558978" duration="9932000" />
       <workItem from="1587123108954" duration="87000" />
       <workItem from="1587125407344" duration="33000" />
-      <workItem from="1587125458120" duration="7476000" />
+      <workItem from="1587125458120" duration="7582000" />
+      <workItem from="1587204418212" duration="2490000" />
+      <workItem from="1587207268842" duration="3264000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit &#10;Model Classes &#10;one GUI">
       <created>1586772663658</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587041633857</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="View start">
+      <created>1587158845301</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587158845301</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,25 +162,26 @@
     <MESSAGE value="First Commit &#10;Model Classes &#10;one GUI" />
     <MESSAGE value="Type create and read file build" />
     <MESSAGE value="Model first Finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Model first Finish" />
+    <MESSAGE value="View start" />
+    <option name="LAST_COMMIT_MESSAGE" value="View start" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="358" key="#Project_Structure" timestamp="1587035420421">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="872" y="358" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1587035420421" />
-    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser" timestamp="1587135784100">
+    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser" timestamp="1587214072659">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1587135784100" />
+    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1587214072659" />
     <state x="1339" y="439" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587030538934">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1339" y="439" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587030538934" />
-    <state x="1071" y="304" key="CommitChangelistDialog2" timestamp="1587041808229">
+    <state x="702" y="296" key="CommitChangelistDialog2" timestamp="1587158844734">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1071" y="304" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1587041808229" />
+    <state x="702" y="296" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1587158844734" />
     <state x="0" y="0" key="DiffContextDialog" timestamp="1586773295778">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -185,22 +194,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="484" y="640" key="GitCloneDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773071156" />
-    <state width="1234" height="490" key="GridCell.Tab.0.bottom" timestamp="1587050078238">
+    <state width="1234" height="396" key="GridCell.Tab.0.bottom" timestamp="1587214480301">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="490" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587050078238" />
-    <state width="1234" height="490" key="GridCell.Tab.0.center" timestamp="1587050078238">
+    <state width="1234" height="396" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587214480301" />
+    <state width="1234" height="396" key="GridCell.Tab.0.center" timestamp="1587214480301">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="490" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587050078238" />
-    <state width="1234" height="490" key="GridCell.Tab.0.left" timestamp="1587050078237">
+    <state width="1234" height="396" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587214480301" />
+    <state width="1234" height="396" key="GridCell.Tab.0.left" timestamp="1587214480301">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="490" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587050078237" />
-    <state width="1234" height="490" key="GridCell.Tab.0.right" timestamp="1587050078238">
+    <state width="1234" height="396" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587214480301" />
+    <state width="1234" height="396" key="GridCell.Tab.0.right" timestamp="1587214480301">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="490" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587050078238" />
+    <state width="1234" height="396" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587214480301" />
     <state width="1234" height="490" key="GridCell.Tab.1.bottom" timestamp="1587050078238">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -229,10 +238,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="255" y="361" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1586773367957" />
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1587041638473">
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1587158875678">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1587041638473" />
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1587158875678" />
     <state x="1616" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1587123112521">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
