@@ -1,5 +1,6 @@
 package ch.leo.model;
 
+import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,7 +14,7 @@ import java.util.stream.Stream;
  * @version 0.1
  * @since 13.04.2020
  */
-public class Compilation {
+public class Compilation extends DefaultListModel<Application> {
     private Vector<Application> allApplications;
 
     public Compilation() {

@@ -14,79 +14,74 @@ import java.awt.*;
  */
 public class EditDeleteTabPanel extends JPanel {
 
-    private JPanel edPanel;
-
-    private JPanel edUpperPanel;
-
-    private JPanel edLowerPanel;
-    private JPanel edLowernorthPanel;
-    private JPanel edLowersouthPanel;
-
     private DefaultComboBoxModel<Type> typeModel;
-    private JComboBox<Type> getProgrammTypeED;
-
     private DefaultListModel<Application> applicationModel;
-    private JList<Application> getApplicationsED;
-    private JScrollPane listscrollpaneED;
 
-    private JLabel searchAreaED;
-    private JTextField searchFieldED;
+    private JComboBox<Type> programmType;
+    private JList<Application> applications;
+
+    private JLabel searchLabel;
+    private JTextField searchField;
 
     private JButton editButton;
     private JButton deleteButton;
 
     public EditDeleteTabPanel(DefaultComboBoxModel<Type> typeModel, DefaultListModel<Application> applicationModel) {
+        this.setLayout(new BorderLayout(10,10));
+
         this.typeModel = typeModel;
         this.applicationModel = applicationModel;
 
+        programmType = new JComboBox<Type>(this.typeModel);
+        programmType.setEditable(false);
+        programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
 
-        edPanel = new JPanel();
+        applications = new JList<Application>(this.applicationModel);
 
-        edUpperPanel = new JPanel();
-
-        edLowerPanel = new JPanel();
-        edLowernorthPanel = new JPanel();
-        edLowersouthPanel = new JPanel();
-
-        getProgrammTypeED = new JComboBox<Type>(this.typeModel);
-        getProgrammTypeED.setEditable(false);
-        getProgrammTypeED.setPreferredSize(new Dimension(150, getProgrammTypeED.getPreferredSize().height));
-
-        getApplicationsED = new JList<Application>(this.applicationModel);
-        listscrollpaneED = new JScrollPane();
-
-        searchAreaED = new JLabel("Eintrag eingeben:");
-        searchFieldED = new JTextField();
+        searchLabel = new JLabel("Eintrag eingeben:");
+        searchField = new JTextField();
+        searchField.setPreferredSize(new Dimension(200,20));
 
         editButton = new JButton("Bearbeiten");
         deleteButton = new JButton("Löschen");
 
-        init();
+        add(editdeleteUpperPanel(), BorderLayout.CENTER);
+        add(searchLowerPanel(), BorderLayout.SOUTH );
 
         setVisible(true);
 
     }
 
-    private void init(){
+    private JPanel editdeleteUpperPanel(){
+        JPanel upperPanel = new JPanel(new BorderLayout(5,5));
+        JPanel comboboxPanel = new JPanel(new BorderLayout(5, 5));
+        JPanel listPanel = new JPanel(new BorderLayout(5, 5));
 
-        add(edPanel);
+        comboboxPanel.add(programmType, BorderLayout.WEST);
+        listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
 
-        edPanel.add(edUpperPanel, BorderLayout.CENTER);
+        upperPanel.add(comboboxPanel, BorderLayout.WEST);
+        upperPanel.add(comboboxPanel, BorderLayout.CENTER);
+        upperPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.SOUTH);
 
-        edUpperPanel.add(getProgrammTypeED, BorderLayout.WEST);
-        edUpperPanel.add(getApplicationsED, BorderLayout.CENTER);
+        return upperPanel;
+    }
 
-        edPanel.add(edLowerPanel, BorderLayout.SOUTH);
-        edLowerPanel.add(edLowernorthPanel, BorderLayout.CENTER);
-        edLowerPanel.add(edLowersouthPanel, BorderLayout.SOUTH);
+    private JPanel searchLowerPanel() {
+        JPanel lowerPanel = new JPanel(new BorderLayout(5, 5));
+        JPanel textPanel = new JPanel(new FlowLayout());
+        JPanel buttonPanel = new JPanel(new BorderLayout(5,5));
 
-        edLowernorthPanel.setLayout(new GridLayout(1,2));
-        edLowernorthPanel.add(searchAreaED);
-        edLowernorthPanel.add(searchFieldED);
+        textPanel.add(searchLabel);
+        textPanel.add(searchField);
 
-        edLowersouthPanel.add(editButton, BorderLayout.WEST);
-        edLowersouthPanel.add(deleteButton, BorderLayout.EAST);
+        buttonPanel.add(editButton, BorderLayout.WEST);
+        buttonPanel.add(deleteButton, BorderLayout.EAST);
 
+        lowerPanel.add(textPanel, BorderLayout.CENTER);
+        lowerPanel.add(buttonPanel, BorderLayout.SOUTH);
+
+        return lowerPanel;
     }
 
 }

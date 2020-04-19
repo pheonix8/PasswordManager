@@ -2,6 +2,7 @@ package ch.leo.view;
 
 import ch.leo.model.*;
 
+import javax.print.attribute.HashPrintJobAttributeSet;
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,87 +15,85 @@ import java.awt.*;
  */
 public class CreateTabPanel extends JPanel {
 
-    private JPanel createPanel;
+    private DefaultComboBoxModel<Type> typeModel;
+    private JComboBox<Type> programmType;
 
-    private JPanel createLeftPanel;
-    private JPanel createLeftnorthPanel;
-
-    private JPanel createRightPanel;
-
-    private JLabel applicationArea;
+    private JLabel applicationLabel;
     private JTextField applicationField;
 
-    private JLabel usernameArea;
+    private JLabel usernameLabel;
     private JTextField usernameField;
 
-    private JLabel emailArea;
+    private JLabel emailLabel;
     private JTextField emailField;
 
-    private JLabel passwordArea;
+    private JLabel passwordLabel;
     private JTextField passwordField;
-
-    private JComboBox<Type> getProgrammType;
 
     private JButton createButton;
 
-    public CreateTabPanel() {
+    public CreateTabPanel(DefaultComboBoxModel<Type> typeModel) {
+        this.setLayout(new BorderLayout(10,10));
 
-        createPanel = new JPanel();
+        this.typeModel = typeModel;
 
-        createLeftPanel = new JPanel();
-        createLeftnorthPanel = new JPanel();
+        programmType = new JComboBox<Type>(this.typeModel);
+        programmType.setEditable(false);
+        programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
 
-        createRightPanel = new JPanel();
-
-        applicationArea = new JLabel("Application:");
+        applicationLabel = new JLabel("Application:");
         applicationField = new JTextField();
 
-        usernameArea = new JLabel("Benutzername:");
+        usernameLabel = new JLabel("Benutzername:");
         usernameField = new JTextField();
 
-        emailArea = new JLabel("E-Mail:");
+        emailLabel = new JLabel("E-Mail:");
         emailField = new JTextField();
 
-        passwordArea = new JLabel("Passwort:");
+        passwordLabel = new JLabel("Passwort:");
         passwordField = new JTextField();
-
-        getProgrammType = new JComboBox<>();
 
         createButton = new JButton("Erstellen");
 
-        init();
+        add(createUpperPanel(), BorderLayout.CENTER);
+        add(createLowerPanel(), BorderLayout.SOUTH);
 
         setVisible(true);
 
     }
 
-    private void init(){
+    private  JPanel createUpperPanel(){
+        JPanel upperPanel = new JPanel(new BorderLayout(5,5));
+        JPanel dataPanel = new JPanel(new GridLayout(1,2));
+        JPanel createDataPanel = new JPanel(new GridLayout(4,2));
+        JPanel comboboxPanel = new JPanel(new BorderLayout(5,5));
 
-        add(createPanel);
+        createDataPanel.add(applicationLabel);
+        createDataPanel.add(applicationField);
+        createDataPanel.add(usernameLabel);
+        createDataPanel.add(usernameField);
+        createDataPanel.add(emailLabel);
+        createDataPanel.add(emailField);
+        createDataPanel.add(passwordLabel);
+        createDataPanel.add(passwordField);
 
-        createPanel.add(createLeftPanel, BorderLayout.WEST);
+        comboboxPanel.add(programmType, BorderLayout.CENTER);
 
-        createLeftPanel.add(createLeftnorthPanel, BorderLayout.NORTH);
+        dataPanel.add(createDataPanel);
+        dataPanel.add(comboboxPanel);
 
-        createLeftnorthPanel.setLayout(new GridLayout(4,2));
+        upperPanel.add(dataPanel, BorderLayout.CENTER);
+        upperPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.SOUTH);
 
-        createLeftnorthPanel.add(applicationArea);
-        createLeftnorthPanel.add(applicationField);
-
-        createLeftnorthPanel.add(usernameArea);
-        createLeftnorthPanel.add(usernameField);
-
-        createLeftnorthPanel.add(emailArea);
-        createLeftnorthPanel.add(emailField);
-
-        createLeftnorthPanel.add(passwordArea);
-        createLeftnorthPanel.add(passwordField);
-
-        createLeftPanel.add(getProgrammType, BorderLayout.CENTER);
-
-        createPanel.add(createRightPanel, BorderLayout.EAST);
-
-        createRightPanel.add(createButton,BorderLayout.SOUTH);
-
+        return upperPanel;
     }
+
+    private JPanel createLowerPanel(){
+        JPanel lowerPanel = new JPanel(new BorderLayout(5,5));
+
+        lowerPanel.add(createButton, BorderLayout.CENTER);
+
+        return lowerPanel;
+    }
+
 }

@@ -21,7 +21,10 @@ public class PasswordManagerStart {
         Types t = new Types();
 
         new DataInitialization(c,t);
-        
+        System.out.println(c);
+        System.out.println(t);
+
+        PasswortmanagerGUI passwortmanagerGUI = new PasswortmanagerGUI(c,t);
 
     }
 }

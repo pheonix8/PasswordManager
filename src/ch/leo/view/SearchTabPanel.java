@@ -14,56 +14,61 @@ import java.awt.*;
  */
 public class SearchTabPanel extends JPanel {
 
-    private JPanel searchPanel;
-    private JPanel searchUpperPanel;
-    private JPanel searchLowerPanel;
+    private DefaultComboBoxModel<Type> typeModel;
+    private DefaultListModel<Application> applicationModel;
 
-    private JComboBox programmType;
-
+    private JComboBox<Type> programmType;
     private JList<Application> applications;
-    private JScrollPane listscrollpane;
 
     private JButton searchButton;
-    private JLabel searchArea;
+    private JLabel searchLabel;
     private JTextField searchfield;
 
-    public SearchTabPanel() {
+    public SearchTabPanel(DefaultComboBoxModel<Type> typeModel, DefaultListModel<Application> applicationModel) {
+        this.setLayout(new BorderLayout(10, 10));
 
-        searchPanel = new JPanel();
-        searchUpperPanel = new JPanel();
-        searchLowerPanel = new JPanel();
+        this.typeModel = typeModel;
+        this.applicationModel = applicationModel;
 
-        programmType = new JComboBox();
+        programmType = new JComboBox<Type>(this.typeModel);
+        programmType.setEditable(false);
+        programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
 
-        applications = new JList<>();
-        listscrollpane = new JScrollPane();
+        applications = new JList<Application>(this.applicationModel);
 
         searchButton = new JButton("Suchen");
-        searchArea = new JLabel("Passwort Anzeigen:");
+        searchLabel = new JLabel("Passwort Anzeigen:");
         searchfield = new JTextField();
 
-        init();
+        add(searchUpperPanel(), BorderLayout.CENTER);
+        add(searchLowerPanel(), BorderLayout.SOUTH);
 
         setVisible(true);
     }
 
-    private void init(){
+    private JPanel searchUpperPanel() {
+        JPanel upperPanel = new JPanel(new BorderLayout(5, 5));
+        JPanel comboboxPanel = new JPanel(new BorderLayout(5, 5));
+        JPanel listPanel = new JPanel(new BorderLayout(5, 5));
 
-        add(searchPanel);
+        comboboxPanel.add(programmType, BorderLayout.WEST);
+        listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
 
-        searchPanel.add(searchUpperPanel, BorderLayout.CENTER);
+        upperPanel.add(comboboxPanel, BorderLayout.WEST);
+        upperPanel.add(comboboxPanel, BorderLayout.CENTER);
+        upperPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.SOUTH);
 
-        searchUpperPanel.add(programmType, BorderLayout.WEST);
-        searchUpperPanel.add(applications, BorderLayout.CENTER);
-
-        searchPanel.add(new JSeparator(SwingConstants.VERTICAL));
-
-        searchPanel.add(searchLowerPanel, BorderLayout.SOUTH);
-
-        searchLowerPanel.setLayout(new GridLayout(1,3));
-        searchLowerPanel.add(searchArea);
-        searchLowerPanel.add(searchfield);
-        searchLowerPanel.add(searchButton);
-
+        return upperPanel;
     }
+
+    private JPanel searchLowerPanel() {
+        JPanel lowerPanel = new JPanel(new BorderLayout(10, 10));
+
+        lowerPanel.add(searchLabel, BorderLayout.WEST);
+        lowerPanel.add(searchfield, BorderLayout.CENTER);
+        lowerPanel.add(searchButton, BorderLayout.EAST);
+
+        return lowerPanel;
+    }
+
 }

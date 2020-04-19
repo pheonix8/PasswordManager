@@ -24,36 +24,39 @@ public class PasswortmanagerGUI extends JFrame {
     public PasswortmanagerGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<ch.leo.model.Type> typeModel){
 
         super("Passwordmanager");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.applicationModel = applicationModel;
         this.typeModel = typeModel;
 
         tabs = new JTabbedPane();
-        searchTab = new SearchTabPanel();
-        createTab = new CreateTabPanel();
-        editDeleteTab = new EditDeleteTabPanel(typeModel, applicationModel);
+        initSearchTab(this.typeModel, this.applicationModel);
+        initCreateTab(this.typeModel);
+        initEditDeleteTab(this.typeModel, this.applicationModel);
+        this.add(tabs, BorderLayout.CENTER);
 
-        setMinimumSize(new Dimension(640,480));
-        setSize(640, 480);
-        setResizable(false);
+        setMinimumSize(new Dimension(500, 400));
 
-        init();
         pack();
-
-        setLocationByPlatform(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
     }
 
-    private void init(){
-
-        getContentPane().add(tabs);
-        tabs.add("Passwörter", searchTab);
-        tabs.add("Erstellen", createTab);
+    private void initEditDeleteTab(DefaultComboBoxModel<ch.leo.model.Type> typeModel, DefaultListModel<Application> applicationModel){
+        editDeleteTab = new EditDeleteTabPanel(typeModel, applicationModel);
         tabs.add("Bearbeiten/Löschen", editDeleteTab);
-
     }
+
+    private void initSearchTab(DefaultComboBoxModel<ch.leo.model.Type> typeModel, DefaultListModel<Application> applicationModel){
+        searchTab = new SearchTabPanel(typeModel, applicationModel);
+        tabs.add("Passwörter", searchTab);
+    }
+
+    private void initCreateTab(DefaultComboBoxModel<ch.leo.model.Type> typeModel){
+        createTab = new CreateTabPanel(typeModel);
+        tabs.add("Erstellen", createTab);
+    }
+
 
 
 }

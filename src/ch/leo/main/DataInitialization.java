@@ -27,5 +27,7 @@ public class DataInitialization {
         Compilation c = new Compilation();
         Types t = new Types();
         DataInitialization di = new DataInitialization(c,t);
+        System.out.println(c);
+        System.out.println(t);
     }
 }
