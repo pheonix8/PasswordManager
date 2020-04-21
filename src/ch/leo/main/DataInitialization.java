@@ -18,7 +18,7 @@ public class DataInitialization {
         this.compilation = compilation;
         this.types = types;
 
-        types.addType("GameLauncher");
+        types.addType("Gamelauncher");
         types.addType("Mail");
         types.addType("Music");
         types.addType("Others");

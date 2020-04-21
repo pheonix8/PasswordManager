@@ -1,18 +1,20 @@
 package ch.leo.view;
 
-import ch.leo.model.*;
-
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Project PasswordManager
  *
  * @author Leo Oetterli
  * @version 0.1
- * @since 17.04.2020
+ * @since 21.04.2020
  */
-public class CreateTabPanel extends JPanel {
+public class EditDialog extends JDialog {
+
+    private String title;
 
     private DefaultComboBoxModel<String> typeModel;
     private JComboBox<String> programmType;
@@ -29,10 +31,15 @@ public class CreateTabPanel extends JPanel {
     private JLabel passwordLabel;
     private JTextField passwordField;
 
-    private JButton createButton;
+    private JButton saveButton;
+    private JButton cancelButton;
 
-    public CreateTabPanel(DefaultComboBoxModel<String> typeModel) {
-        this.setLayout(new BorderLayout(10,10));
+    public EditDialog(DefaultComboBoxModel<String> typeModel, String title) {
+        this.title = title;
+        setTitle(title);
+
+        setSize(400,200);
+        setLayout(new BorderLayout(10,10));
 
         this.typeModel = typeModel;
 
@@ -52,16 +59,22 @@ public class CreateTabPanel extends JPanel {
         passwordLabel = new JLabel("Password:");
         passwordField = new JTextField();
 
-        createButton = new JButton("Create");
+        saveButton = new JButton("Save");
+        cancelButton = new JButton("Cancel");
 
-        add(createUpperPanel(), BorderLayout.CENTER);
-        add(createLowerPanel(), BorderLayout.SOUTH);
+        cancelButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
+        add(editUpperPanel(), BorderLayout.CENTER);
+        add(editLowerPanel(), BorderLayout.SOUTH);
 
         setVisible(true);
-
     }
 
-    private  JPanel createUpperPanel(){
+    private JPanel editUpperPanel(){
         JPanel upperPanel = new JPanel(new BorderLayout(5,5));
         JPanel dataPanel = new JPanel(new GridLayout(1,2));
         JPanel createDataPanel = new JPanel(new GridLayout(4,2));
@@ -82,17 +95,16 @@ public class CreateTabPanel extends JPanel {
         dataPanel.add(comboboxPanel);
 
         upperPanel.add(dataPanel, BorderLayout.CENTER);
-        upperPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.SOUTH);
 
         return upperPanel;
     }
 
-    private JPanel createLowerPanel(){
+    private JPanel editLowerPanel(){
         JPanel lowerPanel = new JPanel(new BorderLayout(5,5));
 
-        lowerPanel.add(createButton, BorderLayout.CENTER);
+        lowerPanel.add(cancelButton, BorderLayout.WEST);
+        lowerPanel.add(saveButton, BorderLayout.EAST);
 
         return lowerPanel;
     }
-
 }

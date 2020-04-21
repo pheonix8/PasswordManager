@@ -4,6 +4,8 @@ import ch.leo.model.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Project PasswordManager
@@ -33,12 +35,24 @@ public class SearchTabPanel extends JPanel {
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
+        programmType.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onTypeSelection(e);
+            }
+        });
 
         applications = new JList<Application>(this.applicationModel);
+        applications.setCellRenderer(new MyCellRenderer());
 
-        searchButton = new JButton("Suchen");
         searchLabel = new JLabel("Passwort Anzeigen:");
         searchfield = new JTextField();
+        searchButton = new JButton("Suchen");
+
+        searchButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onClickShowOpen(e);
+            }
+        });
 
         add(searchUpperPanel(), BorderLayout.CENTER);
         add(searchLowerPanel(), BorderLayout.SOUTH);
@@ -69,6 +83,15 @@ public class SearchTabPanel extends JPanel {
         lowerPanel.add(searchButton, BorderLayout.EAST);
 
         return lowerPanel;
+    }
+
+    private void onTypeSelection(ActionEvent e) {
+        ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
+    }
+
+    private void onClickShowOpen(ActionEvent e) {
+        String getValue;
+        ShowPassword showPassword = new ShowPassword( getValue = searchfield.getText());
     }
 
 }

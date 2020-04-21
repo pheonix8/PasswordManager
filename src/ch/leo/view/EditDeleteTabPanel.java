@@ -4,6 +4,8 @@ import ch.leo.model.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Project PasswordManager
@@ -35,6 +37,11 @@ public class EditDeleteTabPanel extends JPanel {
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
+        programmType.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onTypeSelection(e);
+            }
+        });
 
         applications = new JList<Application>(this.applicationModel);
 
@@ -43,7 +50,18 @@ public class EditDeleteTabPanel extends JPanel {
         searchField.setPreferredSize(new Dimension(200,20));
 
         editButton = new JButton("Bearbeiten");
+        editButton.addActionListener((new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onClickEditWindow(e);
+            }
+        }));
+
         deleteButton = new JButton("Löschen");
+        deleteButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onClickDeleteWindow(e);
+            }
+        });
 
         add(editdeleteUpperPanel(), BorderLayout.CENTER);
         add(searchLowerPanel(), BorderLayout.SOUTH );
@@ -82,6 +100,20 @@ public class EditDeleteTabPanel extends JPanel {
         lowerPanel.add(buttonPanel, BorderLayout.SOUTH);
 
         return lowerPanel;
+    }
+
+    private void onTypeSelection(ActionEvent e) {
+        ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
+    }
+
+    private void onClickDeleteWindow(ActionEvent e) {
+        String getValue;
+        DeleteDialog deleteDialog = new DeleteDialog(getValue = searchField.getText());
+    }
+
+    private void onClickEditWindow(ActionEvent e) {
+        String getValue;
+        EditDialog editDialog = new EditDialog(typeModel, getValue = searchField.getText());
     }
 
 }

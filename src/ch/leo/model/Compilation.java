@@ -42,8 +42,8 @@ public class Compilation extends DefaultListModel<Application> {
 
     }
 
-    public void removeApplication(int index){
-        allApplications.remove(index);
+    public void removeApplication(Application application){
+        allApplications.remove(application);
     }
 
     @Override
@@ -68,6 +68,17 @@ public class Compilation extends DefaultListModel<Application> {
             return allApplications.get(index);
         else
             return selectedApplications.get(index);
+    }
+
+    public  void setSelectedType(String type) {
+        selectedApplications.clear();
+        selectedType = type;
+        System.out.println("Type = " + selectedType);
+        for (Application application : allApplications) {
+            if ( application.getType().compareToIgnoreCase(type) == 0)
+                selectedApplications.add(application);
+        }
+        this.fireContentsChanged(this, 0, selectedApplications.size());
     }
 
     public void createfile(){
