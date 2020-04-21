@@ -14,10 +14,10 @@ import java.awt.*;
  */
 public class EditDeleteTabPanel extends JPanel {
 
-    private DefaultComboBoxModel<Type> typeModel;
+    private DefaultComboBoxModel<String> typeModel;
     private DefaultListModel<Application> applicationModel;
 
-    private JComboBox<Type> programmType;
+    private JComboBox<String> programmType;
     private JList<Application> applications;
 
     private JLabel searchLabel;
@@ -26,13 +26,13 @@ public class EditDeleteTabPanel extends JPanel {
     private JButton editButton;
     private JButton deleteButton;
 
-    public EditDeleteTabPanel(DefaultComboBoxModel<Type> typeModel, DefaultListModel<Application> applicationModel) {
+    public EditDeleteTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         this.setLayout(new BorderLayout(10,10));
 
         this.typeModel = typeModel;
         this.applicationModel = applicationModel;
 
-        programmType = new JComboBox<Type>(this.typeModel);
+        programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
 

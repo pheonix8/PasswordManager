@@ -14,23 +14,23 @@ import java.awt.*;
  */
 public class SearchTabPanel extends JPanel {
 
-    private DefaultComboBoxModel<Type> typeModel;
+    private DefaultComboBoxModel<String> typeModel;
     private DefaultListModel<Application> applicationModel;
 
-    private JComboBox<Type> programmType;
+    private JComboBox<String> programmType;
     private JList<Application> applications;
 
     private JButton searchButton;
     private JLabel searchLabel;
     private JTextField searchfield;
 
-    public SearchTabPanel(DefaultComboBoxModel<Type> typeModel, DefaultListModel<Application> applicationModel) {
+    public SearchTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         this.setLayout(new BorderLayout(10, 10));
 
         this.typeModel = typeModel;
         this.applicationModel = applicationModel;
 
-        programmType = new JComboBox<Type>(this.typeModel);
+        programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
 

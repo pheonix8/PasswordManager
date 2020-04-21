@@ -15,23 +15,59 @@ import java.util.stream.Stream;
  * @since 13.04.2020
  */
 public class Compilation extends DefaultListModel<Application> {
-    private Vector<Application> allApplications;
+    private Vector<Application> allApplications, selectedApplications;
+    private String selectedType;
 
     public Compilation() {
-        this.allApplications = new Vector<Application>();
+        allApplications = new Vector<Application>();
+        selectedApplications = new Vector<Application>();
+        selectedType = null;
+    }
+
+    public  int getOriginalSize(){
+        return allApplications.size();
+    }
+
+    public int getSelectedSize(){
+        return selectedApplications.size();
     }
 
     public void addApplication(Application application){
         allApplications.add(application);
+        selectedApplications.add(application);
     }
 
-    public int getApplication(int index){
-        allApplications.get(index);
-        return index;
+    public String getApplication(int index){
+        return allApplications.get(index).getApplication();
+
     }
 
     public void removeApplication(int index){
         allApplications.remove(index);
+    }
+
+    @Override
+    public String toString() {
+        String out = "all Passwords:\n";
+
+        for (Application application : allApplications) {
+            out += application.toString() + "\n";
+        }
+        return out;
+    }
+
+    public int getSize() {
+        if (selectedType == null)
+            return allApplications.size();
+        else
+            return selectedApplications.size();
+    }
+
+    public Application getElementAt(int index) {
+        if (selectedType == null)
+            return allApplications.get(index);
+        else
+            return selectedApplications.get(index);
     }
 
     public void createfile(){
@@ -67,11 +103,10 @@ public class Compilation extends DefaultListModel<Application> {
             lines.forEach((String t) -> {
                 String[] parse = t.split(",");
                 if(parse.length<2) return;
-                int i = Integer.parseInt(parse[4]);
-                allApplications.add(new Application(parse[0], parse[1], parse[2], parse[3], i));
+                allApplications.add(new Application(parse[0], parse[1], parse[2], parse[3], parse[4]));
             });
         } catch (IOException ex) {
-            System.out.println("Unable to open student file." + ex.toString());
+            System.out.println("Unable to open file." + ex.toString());
         }
 
     }

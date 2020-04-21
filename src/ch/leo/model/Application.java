@@ -12,14 +12,19 @@ public class Application {
     private String username;
     private String application;
     private String email;
-    private int type;
+    private String type;
 
-    public Application(String password, String username, String application, String email, int type) {
+    public Application(String password, String username, String application, String email, String type) {
         this.password = password;
         this.username = username;
         this.application = application;
         this.email = email;
         this.type = type;
+    }
+
+    public void setApplication(String application, String type){
+        setApplication(application);
+        setType(type);
     }
 
     public String getPassword() {
@@ -54,20 +59,20 @@ public class Application {
         this.email = email;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
     @Override
     public String toString() {
-        return "" + password + ","
-                + username + ","
-                + application + ","
-                + email + ","
+        return "" + application + ": "
+                + username + ", "
+                + password + ", "
+                + email + ", "
                 + type;
     }
 }

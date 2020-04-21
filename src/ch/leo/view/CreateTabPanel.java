@@ -2,7 +2,6 @@ package ch.leo.view;
 
 import ch.leo.model.*;
 
-import javax.print.attribute.HashPrintJobAttributeSet;
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,8 +14,8 @@ import java.awt.*;
  */
 public class CreateTabPanel extends JPanel {
 
-    private DefaultComboBoxModel<Type> typeModel;
-    private JComboBox<Type> programmType;
+    private DefaultComboBoxModel<String> typeModel;
+    private JComboBox<String> programmType;
 
     private JLabel applicationLabel;
     private JTextField applicationField;
@@ -32,12 +31,12 @@ public class CreateTabPanel extends JPanel {
 
     private JButton createButton;
 
-    public CreateTabPanel(DefaultComboBoxModel<Type> typeModel) {
+    public CreateTabPanel(DefaultComboBoxModel<String> typeModel) {
         this.setLayout(new BorderLayout(10,10));
 
         this.typeModel = typeModel;
 
-        programmType = new JComboBox<Type>(this.typeModel);
+        programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
 
