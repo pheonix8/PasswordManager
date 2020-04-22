@@ -1,9 +1,14 @@
 package ch.leo.view;
 
+import ch.leo.controller.CreateController;
 import ch.leo.model.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * Project PasswordManager
@@ -16,6 +21,8 @@ public class CreateTabPanel extends JPanel {
 
     private DefaultComboBoxModel<String> typeModel;
     private JComboBox<String> programmType;
+
+    private DefaultListModel<Application> applicationModel;
 
     private JLabel applicationLabel;
     private JTextField applicationField;
@@ -31,14 +38,16 @@ public class CreateTabPanel extends JPanel {
 
     private JButton createButton;
 
-    public CreateTabPanel(DefaultComboBoxModel<String> typeModel) {
+    public CreateTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         this.setLayout(new BorderLayout(10,10));
 
         this.typeModel = typeModel;
+        this.applicationModel = applicationModel;
 
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
+        programmType.addActionListener(e -> CreateController.onTypeSelection(this.createButton));
 
         applicationLabel = new JLabel("Application:");
         applicationField = new JTextField();
@@ -51,13 +60,30 @@ public class CreateTabPanel extends JPanel {
 
         passwordLabel = new JLabel("Password:");
         passwordField = new JTextField();
+        passwordField.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                CreateController.onDataEntered(programmType);
+            }
+        });
 
         createButton = new JButton("Create");
+        createButton.addActionListener(e -> CreateController.onApplicationAdded(
+                passwordField,
+                usernameField,
+                applicationField,
+                emailField,
+                programmType,
+                createButton,
+                applicationModel
+        ));
 
         add(createUpperPanel(), BorderLayout.CENTER);
         add(createLowerPanel(), BorderLayout.SOUTH);
 
         setVisible(true);
+
+        programmType.setEnabled(false);
+        createButton.setEnabled(false);
 
     }
 

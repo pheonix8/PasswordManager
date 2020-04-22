@@ -1,11 +1,15 @@
 package ch.leo.view;
 
+import ch.leo.controller.EditDeleteController;
+import ch.leo.controller.SearchController;
 import ch.leo.model.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * Project PasswordManager
@@ -37,36 +41,31 @@ public class EditDeleteTabPanel extends JPanel {
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
-        programmType.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onTypeSelection(e);
-            }
-        });
+        programmType.addActionListener(e -> EditDeleteController.onTypeSelection(programmType, applicationModel));
 
         applications = new JList<Application>(this.applicationModel);
+        applications.setCellRenderer(new MyCellRenderer());
 
         searchLabel = new JLabel("Eintrag eingeben:");
         searchField = new JTextField();
         searchField.setPreferredSize(new Dimension(200,20));
-
-        editButton = new JButton("Bearbeiten");
-        editButton.addActionListener((new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onClickEditWindow(e);
-            }
-        }));
-
-        deleteButton = new JButton("Löschen");
-        deleteButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onClickDeleteWindow(e);
+        searchField.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                EditDeleteController.onDataEntered(searchField,applicationModel,deleteButton,editButton);
             }
         });
+
+        editButton = new JButton("Bearbeiten");
+        editButton.addActionListener(e -> EditDeleteController.onClickEditWindow(searchField, typeModel, applicationModel));
+
+        deleteButton = new JButton("Löschen");
+        deleteButton.addActionListener(e -> EditDeleteController.onClickDeleteWindow(searchField));
 
         add(editdeleteUpperPanel(), BorderLayout.CENTER);
         add(searchLowerPanel(), BorderLayout.SOUTH );
 
-        setVisible(true);
+        editButton.setEnabled(false);
+        deleteButton.setEnabled(false);
 
     }
 
@@ -79,7 +78,7 @@ public class EditDeleteTabPanel extends JPanel {
         listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
 
         upperPanel.add(comboboxPanel, BorderLayout.WEST);
-        upperPanel.add(comboboxPanel, BorderLayout.CENTER);
+        upperPanel.add(listPanel, BorderLayout.CENTER);
         upperPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.SOUTH);
 
         return upperPanel;
@@ -102,18 +101,6 @@ public class EditDeleteTabPanel extends JPanel {
         return lowerPanel;
     }
 
-    private void onTypeSelection(ActionEvent e) {
-        ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
-    }
 
-    private void onClickDeleteWindow(ActionEvent e) {
-        String getValue;
-        DeleteDialog deleteDialog = new DeleteDialog(getValue = searchField.getText());
-    }
-
-    private void onClickEditWindow(ActionEvent e) {
-        String getValue;
-        EditDialog editDialog = new EditDialog(typeModel, getValue = searchField.getText());
-    }
 
 }

@@ -14,16 +14,17 @@ import java.awt.*;
  */
 public class MyCellRenderer extends JPanel implements ListCellRenderer<Object> {
 
-    JTextArea applicationName;
+    JTextField typeName;
+    JTextField applicationName;
     JScrollPane scrollPane;
 
     MyCellRenderer(){
-        applicationName = new JTextArea(1,12);
+        typeName = new JTextField(12);
+        typeName.setEditable(false);
+        typeName.setBackground(new Color(248,240,176));
+        applicationName = new JTextField(12);
         applicationName.setEditable(false);
-        scrollPane = new JScrollPane(applicationName, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
     }
-
-
 
     @Override
     public Component getListCellRendererComponent(
@@ -33,9 +34,11 @@ public class MyCellRenderer extends JPanel implements ListCellRenderer<Object> {
             boolean isSelected,
             boolean cellHasFocus)
     {
-        applicationName.setText( ((Application)value).getApplication() );
         this.setLayout(new BorderLayout());
-        this.add(scrollPane, BorderLayout.CENTER);
+        typeName.setText( ((Application)value).getType() );
+        applicationName.setText( ((Application)value).getApplication() );
+        this.add(typeName, BorderLayout.NORTH);
+        this.add(applicationName, BorderLayout.SOUTH);
         return this;
     }
 }

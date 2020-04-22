@@ -1,11 +1,15 @@
 package ch.leo.view;
 
+import ch.leo.controller.CreateController;
+import ch.leo.controller.SearchController;
 import ch.leo.model.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * Project PasswordManager
@@ -24,7 +28,7 @@ public class SearchTabPanel extends JPanel {
 
     private JButton searchButton;
     private JLabel searchLabel;
-    private JTextField searchfield;
+    private JTextField searchField;
 
     public SearchTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         this.setLayout(new BorderLayout(10, 10));
@@ -35,29 +39,28 @@ public class SearchTabPanel extends JPanel {
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
-        programmType.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onTypeSelection(e);
-            }
-        });
+        programmType.addActionListener(e -> SearchController.onTypeSelection(programmType,applicationModel));
 
         applications = new JList<Application>(this.applicationModel);
         applications.setCellRenderer(new MyCellRenderer());
 
         searchLabel = new JLabel("Passwort Anzeigen:");
-        searchfield = new JTextField();
+        searchField = new JTextField();
         searchButton = new JButton("Suchen");
 
-        searchButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onClickShowOpen(e);
+        searchField.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                SearchController.onDataEntered(searchField,applicationModel,searchButton);
             }
         });
+        searchButton.addActionListener(e -> SearchController.onClickShowOpen(searchField,applicationModel));
 
-        add(searchUpperPanel(), BorderLayout.CENTER);
-        add(searchLowerPanel(), BorderLayout.SOUTH);
+        this.add(searchUpperPanel(), BorderLayout.CENTER);
+        this.add(searchLowerPanel(), BorderLayout.SOUTH);
 
-        setVisible(true);
+        searchButton.setEnabled(false);
+
+
     }
 
     private JPanel searchUpperPanel() {
@@ -69,7 +72,7 @@ public class SearchTabPanel extends JPanel {
         listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
 
         upperPanel.add(comboboxPanel, BorderLayout.WEST);
-        upperPanel.add(comboboxPanel, BorderLayout.CENTER);
+        upperPanel.add(listPanel, BorderLayout.CENTER);
         upperPanel.add(new JSeparator(JSeparator.HORIZONTAL), BorderLayout.SOUTH);
 
         return upperPanel;
@@ -79,19 +82,10 @@ public class SearchTabPanel extends JPanel {
         JPanel lowerPanel = new JPanel(new BorderLayout(10, 10));
 
         lowerPanel.add(searchLabel, BorderLayout.WEST);
-        lowerPanel.add(searchfield, BorderLayout.CENTER);
+        lowerPanel.add(searchField, BorderLayout.CENTER);
         lowerPanel.add(searchButton, BorderLayout.EAST);
 
         return lowerPanel;
-    }
-
-    private void onTypeSelection(ActionEvent e) {
-        ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
-    }
-
-    private void onClickShowOpen(ActionEvent e) {
-        String getValue;
-        ShowPassword showPassword = new ShowPassword( getValue = searchfield.getText());
     }
 
 }

@@ -30,7 +30,7 @@ public class Types extends DefaultComboBoxModel<String> {
     }
 
     public  String toString() {
-        String out = "Types:";
+        String out = "Types: ";
         for (String type : types) {
             out += type+", ";
         }

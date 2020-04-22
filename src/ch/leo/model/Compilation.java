@@ -81,6 +81,16 @@ public class Compilation extends DefaultListModel<Application> {
         this.fireContentsChanged(this, 0, selectedApplications.size());
     }
 
+    public void addElement(Application application) {
+        addApplication(application);
+        this.fireIntervalAdded(this, getSize()-1, getSize());
+    }
+
+    public void removeElement(Application application) {
+        removeElement(application);
+        this.fireIntervalRemoved(this, getSize()-1, getSize());
+    }
+
     public void createfile(){
 
         PrintStream out = null;

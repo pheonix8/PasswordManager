@@ -1,5 +1,9 @@
 package ch.leo.view;
 
+import ch.leo.controller.EditDeleteController;
+import ch.leo.controller.ValidateSearch;
+import ch.leo.model.Application;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -34,7 +38,7 @@ public class EditDialog extends JDialog {
     private JButton saveButton;
     private JButton cancelButton;
 
-    public EditDialog(DefaultComboBoxModel<String> typeModel, String title) {
+    public EditDialog(DefaultComboBoxModel<String> typeModel, String title, DefaultListModel<Application> applicationModel) {
         this.title = title;
         setTitle(title);
 
@@ -43,27 +47,43 @@ public class EditDialog extends JDialog {
 
         this.typeModel = typeModel;
 
+        ValidateSearch validateSearch = new ValidateSearch();
+
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
+        programmType.setSelectedItem(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getType());
 
         applicationLabel = new JLabel("Application:");
-        applicationField = new JTextField();
+        applicationField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getApplication());
 
         usernameLabel = new JLabel("Username:");
-        usernameField = new JTextField();
+        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getUsername());
 
         emailLabel = new JLabel("E-Mail:");
-        emailField = new JTextField();
+        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getEmail());
 
         passwordLabel = new JLabel("Password:");
-        passwordField = new JTextField();
+        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getPassword());
 
         saveButton = new JButton("Save");
         cancelButton = new JButton("Cancel");
 
         cancelButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
+        saveButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EditDeleteController.onApplicationEdited(
+                        passwordField,
+                        usernameField,
+                        applicationField,
+                        emailField,programmType,
+                        applicationModel,
+                        title);
                 dispose();
             }
         });

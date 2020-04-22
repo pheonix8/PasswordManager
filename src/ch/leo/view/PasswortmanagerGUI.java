@@ -31,7 +31,7 @@ public class PasswortmanagerGUI extends JFrame {
 
         tabs = new JTabbedPane();
         initSearchTab(this.typeModel, this.applicationModel);
-        initCreateTab(this.typeModel);
+        initCreateTab(this.typeModel,this.applicationModel);
         initEditDeleteTab(this.typeModel, this.applicationModel);
         this.add(tabs, BorderLayout.CENTER);
 
@@ -52,8 +52,8 @@ public class PasswortmanagerGUI extends JFrame {
         tabs.add("Passwörter", searchTab);
     }
 
-    private void initCreateTab(DefaultComboBoxModel<String> typeModel){
-        createTab = new CreateTabPanel(typeModel);
+    private void initCreateTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
+        createTab = new CreateTabPanel(typeModel, applicationModel);
         tabs.add("Erstellen", createTab);
     }
 
