@@ -44,9 +44,9 @@ public class SearchTabPanel extends JPanel {
         applications = new JList<Application>(this.applicationModel);
         applications.setCellRenderer(new MyCellRenderer());
 
-        searchLabel = new JLabel("Passwort Anzeigen:");
+        searchLabel = new JLabel("Show Password:");
         searchField = new JTextField();
-        searchButton = new JButton("Suchen");
+        searchButton = new JButton("Search");
 
         searchField.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {

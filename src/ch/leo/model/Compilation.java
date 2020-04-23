@@ -87,7 +87,7 @@ public class Compilation extends DefaultListModel<Application> {
     }
 
     public void removeElement(Application application) {
-        removeElement(application);
+        removeApplication(application);
         this.fireIntervalRemoved(this, getSize()-1, getSize());
     }
 

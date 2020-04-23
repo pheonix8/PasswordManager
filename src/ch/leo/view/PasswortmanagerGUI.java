@@ -44,17 +44,17 @@ public class PasswortmanagerGUI extends JFrame {
 
     private void initEditDeleteTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
         editDeleteTab = new EditDeleteTabPanel(typeModel, applicationModel);
-        tabs.add("Bearbeiten/Löschen", editDeleteTab);
+        tabs.add("Edit/Delete", editDeleteTab);
     }
 
     private void initSearchTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
         searchTab = new SearchTabPanel(typeModel, applicationModel);
-        tabs.add("Passwörter", searchTab);
+        tabs.add("Passwords", searchTab);
     }
 
     private void initCreateTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
         createTab = new CreateTabPanel(typeModel, applicationModel);
-        tabs.add("Erstellen", createTab);
+        tabs.add("Create", createTab);
     }
 
 

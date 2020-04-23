@@ -19,9 +19,9 @@ public class EditDeleteController {
         ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
     }
 
-    public static void onClickDeleteWindow(JTextField searchField){
+    public static void onClickDeleteWindow(JTextField searchField, DefaultListModel<Application> applicationModel){
         String getValue;
-        DeleteDialog deleteDialog = new DeleteDialog(getValue = searchField.getText());
+        DeleteDialog deleteDialog = new DeleteDialog(getValue = searchField.getText(), applicationModel);
     }
 
     public static void onClickEditWindow(JTextField searchField, DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
@@ -31,6 +31,7 @@ public class EditDeleteController {
 
     public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton deleteButton, JButton editButton){
         ValidateSearch validateSearch = new ValidateSearch();
+
         if (validateSearch.validateSearch(searchField, applicationModel) == true){
             deleteButton.setEnabled(true);
             editButton.setEnabled(true);
@@ -41,21 +42,20 @@ public class EditDeleteController {
         }
     }
 
-    public static void onApplicationEdited(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, DefaultListModel<Application> applicationModel, String title){
-
+    public static void onApplicationEdited(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, DefaultListModel<Application> applicationModel, String title) {
         ValidateSearch validateSearch = new ValidateSearch();
 
-        applicationModel.removeElement(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)));
+        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setPassword(passField.getText());
+        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setUsername(userField.getText());
+        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setApplication(appField.getText());
+        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setEmail(emField.getText());
+        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setType(programmType.getSelectedItem().toString());
+    }
 
-        Application newApplication = new Application(
-                passField.getText(),
-                userField.getText(),
-                appField.getText(),
-                emField.getText(),
-                programmType.getSelectedItem().toString());
+    public static void onApplicationDeleted(DefaultListModel<Application> applicationModel, String title) {
+        ValidateSearch validateSearch = new ValidateSearch();
 
-        applicationModel.addElement(newApplication);
-
+        applicationModel.removeElement(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)));
     }
 
 

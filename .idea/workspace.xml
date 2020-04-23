@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/controller/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/controller/ValidateSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/ValidateSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/ValidateSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Types.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/DeleteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/DeleteDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/MyCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/MyCellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/ShowPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/ShowPassword.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +26,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="pheonix8 &lt;61965711+pheonix8@users.noreply.github.com&gt;Li" />
         <option value="pheonix8 &lt;61965711+pheonix8@users.noreply.github.com&gt;" />
       </list>
     </option>
@@ -141,7 +136,8 @@
       <workItem from="1587462912654" duration="13426000" />
       <workItem from="1587549325368" duration="12967000" />
       <workItem from="1587575961099" duration="492000" />
-      <workItem from="1587576462514" duration="5986000" />
+      <workItem from="1587576462514" duration="6183000" />
+      <workItem from="1587640610023" duration="5648000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit &#10;Model Classes &#10;one GUI">
       <created>1586772663658</created>
@@ -199,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587506622859</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Listeners nearly done&#10;Edit dont work&#10;Search dont work properly">
+      <created>1587597039271</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587597039272</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +229,8 @@
     <MESSAGE value="Big Step onely the listeners arent done&#10;and the combobox and list arent ready" />
     <MESSAGE value="Big Change in Type Formate" />
     <MESSAGE value="The new GUIs + some listeners" />
-    <option name="LAST_COMMIT_MESSAGE" value="The new GUIs + some listeners" />
+    <MESSAGE value="Listeners nearly done&#10;Edit dont work&#10;Search dont work properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listeners nearly done&#10;Edit dont work&#10;Search dont work properly" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="358" key="#Project_Structure" timestamp="1587035420421">
@@ -249,10 +253,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1667" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587555580337" />
-    <state x="702" y="296" key="CommitChangelistDialog2" timestamp="1587506622405">
+    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2" timestamp="1587597038844">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="702" y="296" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1587506622405" />
+    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1587597038844" />
     <state x="0" y="0" key="DiffContextDialog" timestamp="1587466666556">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -265,38 +269,38 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="484" y="640" key="GitCloneDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773071156" />
-    <state width="1234" height="5" key="GridCell.Tab.0.bottom" timestamp="1587596746749">
+    <state width="1287" height="2" key="GridCell.Tab.0.bottom" timestamp="1587644782302">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="5" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587596746749" />
-    <state width="1234" height="5" key="GridCell.Tab.0.center" timestamp="1587596746749">
+    <state width="1287" height="2" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587644782302" />
+    <state width="1287" height="2" key="GridCell.Tab.0.center" timestamp="1587644782302">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="5" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587596746749" />
-    <state width="1234" height="5" key="GridCell.Tab.0.left" timestamp="1587596746749">
+    <state width="1287" height="2" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587644782302" />
+    <state width="1287" height="2" key="GridCell.Tab.0.left" timestamp="1587644782302">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="5" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587596746749" />
-    <state width="1234" height="5" key="GridCell.Tab.0.right" timestamp="1587596746749">
+    <state width="1287" height="2" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587644782302" />
+    <state width="1287" height="2" key="GridCell.Tab.0.right" timestamp="1587644782302">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1234" height="5" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587596746749" />
-    <state width="1236" height="472" key="GridCell.Tab.1.bottom" timestamp="1587575937347">
+    <state width="1287" height="2" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587644782302" />
+    <state width="1287" height="488" key="GridCell.Tab.1.bottom" timestamp="1587644037098">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1236" height="472" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587575937347" />
-    <state width="1236" height="472" key="GridCell.Tab.1.center" timestamp="1587575937347">
+    <state width="1287" height="488" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1587644037098" />
+    <state width="1287" height="488" key="GridCell.Tab.1.center" timestamp="1587644037098">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1236" height="472" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587575937347" />
-    <state width="1236" height="472" key="GridCell.Tab.1.left" timestamp="1587575937347">
+    <state width="1287" height="488" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1587644037098" />
+    <state width="1287" height="488" key="GridCell.Tab.1.left" timestamp="1587644037098">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1236" height="472" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587575937347" />
-    <state width="1236" height="472" key="GridCell.Tab.1.right" timestamp="1587575937347">
+    <state width="1287" height="488" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1587644037098" />
+    <state width="1287" height="488" key="GridCell.Tab.1.right" timestamp="1587644037098">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1236" height="472" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587575937347" />
+    <state width="1287" height="488" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1587644037098" />
     <state x="220" y="446" key="IDE.errors.dialog" timestamp="1587037950751">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -309,10 +313,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="255" y="361" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1587559113906" />
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1587506628869">
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1587597045009">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1587506628869" />
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1587597045009" />
     <state width="624" height="700" key="XDebugger.FullValuePopup" timestamp="1587473446109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -321,10 +325,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1616" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587123112521" />
-    <state x="39" y="10" width="1239" height="1379" key="dock-window-1" timestamp="1587593540270">
+    <state x="0" y="20" width="1239" height="1379" key="dock-window-1" timestamp="1587597055346">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="39" y="10" width="1239" height="1379" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1587593540270" />
+    <state x="0" y="20" width="1239" height="1379" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1587597055346" />
     <state x="1151" y="0" width="992" height="911" key="dock-window-2" timestamp="1587570999968">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

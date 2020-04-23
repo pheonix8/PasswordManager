@@ -13,22 +13,29 @@ import javax.swing.*;
  */
 public class ValidateSearch {
 
+
+
     public boolean validateSearch(JTextField searchField, DefaultListModel<Application> applicationModel) {
         boolean validated = false;
         for (int i = 0; i < applicationModel.getSize(); i++) {
-            if (applicationModel.getElementAt(i).getApplication().compareToIgnoreCase(searchField.getText()) == 0)
+            if (applicationModel.getElementAt(i).getApplication().equalsIgnoreCase(searchField.getText())){
                 validated = true;
                 break;
+            }
+            else{
+                validated = false;
+            }
         }
         return validated;
     }
 
     public int getValidatedIndex(String title, DefaultListModel<Application> applicationModel) {
-        int index = 0;
+        int index = 50;
         for (int i = 0; i < applicationModel.getSize(); i++) {
-            if (applicationModel.getElementAt(i).getApplication().compareToIgnoreCase(title) == 0)
+            if (applicationModel.getElementAt(i).getApplication().equalsIgnoreCase(title)) {
                 index = i;
                 break;
+            }
         }
         return index;
     }

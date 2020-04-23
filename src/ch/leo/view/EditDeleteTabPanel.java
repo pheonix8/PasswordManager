@@ -46,7 +46,7 @@ public class EditDeleteTabPanel extends JPanel {
         applications = new JList<Application>(this.applicationModel);
         applications.setCellRenderer(new MyCellRenderer());
 
-        searchLabel = new JLabel("Eintrag eingeben:");
+        searchLabel = new JLabel("Enter item:");
         searchField = new JTextField();
         searchField.setPreferredSize(new Dimension(200,20));
         searchField.addKeyListener(new KeyAdapter() {
@@ -55,11 +55,11 @@ public class EditDeleteTabPanel extends JPanel {
             }
         });
 
-        editButton = new JButton("Bearbeiten");
+        editButton = new JButton("Edit");
         editButton.addActionListener(e -> EditDeleteController.onClickEditWindow(searchField, typeModel, applicationModel));
 
-        deleteButton = new JButton("Löschen");
-        deleteButton.addActionListener(e -> EditDeleteController.onClickDeleteWindow(searchField));
+        deleteButton = new JButton("Delete");
+        deleteButton.addActionListener(e -> EditDeleteController.onClickDeleteWindow(searchField, applicationModel));
 
         add(editdeleteUpperPanel(), BorderLayout.CENTER);
         add(searchLowerPanel(), BorderLayout.SOUTH );
