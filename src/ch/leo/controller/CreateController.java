@@ -34,6 +34,7 @@ public class CreateController {
                 programmType.getSelectedItem().toString());
 
         applicationModel.addElement(newApplication);
+        ((Compilation)applicationModel).createfile();
 
         passField.setText("");
         userField.setText("");

@@ -56,6 +56,7 @@ public class EditDeleteController {
         ValidateSearch validateSearch = new ValidateSearch();
 
         applicationModel.removeElement(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)));
+        ((Compilation)applicationModel).createfile();
     }
 
 

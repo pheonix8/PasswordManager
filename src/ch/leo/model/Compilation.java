@@ -86,9 +86,13 @@ public class Compilation extends DefaultListModel<Application> {
         this.fireIntervalAdded(this, getSize()-1, getSize());
     }
 
-    public void removeElement(Application application) {
-        removeApplication(application);
-        this.fireIntervalRemoved(this, getSize()-1, getSize());
+    @Override
+    public boolean removeElement(Object obj) {
+        boolean success = false;
+        allApplications.removeElement(obj);
+        success =  selectedApplications.removeElement(obj);
+        this.fireIntervalRemoved(this,0,getSize());
+        return success;
     }
 
     public void createfile(){

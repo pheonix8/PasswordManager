@@ -14,7 +14,7 @@ public class Application {
     private String email;
     private String type;
 
-    public Application(String password, String username, String application, String email, String type) {
+    public Application(String application, String username, String password, String email, String type) {
         this.password = password;
         this.username = username;
         this.application = application;
@@ -69,10 +69,10 @@ public class Application {
 
     @Override
     public String toString() {
-        return "" + application + ": "
-                + username + ", "
-                + password + ", "
-                + email + ", "
+        return "" + application + ","
+                + username + ","
+                + password + ","
+                + email + ","
                 + type;
     }
 }
