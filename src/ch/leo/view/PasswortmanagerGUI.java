@@ -1,6 +1,7 @@
 package ch.leo.view;
 
 import ch.leo.model.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,7 +22,7 @@ public class PasswortmanagerGUI extends JFrame {
     private CreateTabPanel createTab;
     private EditDeleteTabPanel editDeleteTab;
 
-    public PasswortmanagerGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<String> typeModel){
+    public PasswortmanagerGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<String> typeModel) {
 
         super("Passwordmanager");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,7 +32,7 @@ public class PasswortmanagerGUI extends JFrame {
 
         tabs = new JTabbedPane();
         initSearchTab(this.typeModel, this.applicationModel);
-        initCreateTab(this.typeModel,this.applicationModel);
+        initCreateTab(this.typeModel, this.applicationModel);
         initEditDeleteTab(this.typeModel, this.applicationModel);
         this.add(tabs, BorderLayout.CENTER);
 
@@ -42,21 +43,20 @@ public class PasswortmanagerGUI extends JFrame {
 
     }
 
-    private void initEditDeleteTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
+    private void initEditDeleteTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         editDeleteTab = new EditDeleteTabPanel(typeModel, applicationModel);
         tabs.add("Edit/Delete", editDeleteTab);
     }
 
-    private void initSearchTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
+    private void initSearchTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         searchTab = new SearchTabPanel(typeModel, applicationModel);
         tabs.add("Passwords", searchTab);
     }
 
-    private void initCreateTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel){
+    private void initCreateTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         createTab = new CreateTabPanel(typeModel, applicationModel);
         tabs.add("Create", createTab);
     }
-
 
 
 }

@@ -4,6 +4,7 @@ import ch.leo.controller.CreateController;
 import ch.leo.model.*;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,7 +40,7 @@ public class CreateTabPanel extends JPanel {
     private JButton createButton;
 
     public CreateTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
-        this.setLayout(new BorderLayout(10,10));
+        this.setLayout(new BorderLayout(10, 10));
 
         this.typeModel = typeModel;
         this.applicationModel = applicationModel;
@@ -87,11 +88,13 @@ public class CreateTabPanel extends JPanel {
 
     }
 
-    private  JPanel createUpperPanel(){
-        JPanel upperPanel = new JPanel(new BorderLayout(5,5));
-        JPanel dataPanel = new JPanel(new GridLayout(1,2));
-        JPanel createDataPanel = new JPanel(new GridLayout(4,2));
-        JPanel comboboxPanel = new JPanel(new BorderLayout(5,5));
+    private JPanel createUpperPanel() {
+        Border upperborder = BorderFactory.createEmptyBorder(50, 0, 100, 0);
+
+        JPanel upperPanel = new JPanel(new BorderLayout(5, 5));
+        JPanel dataPanel = new JPanel(new GridLayout(1, 2));
+        JPanel createDataPanel = new JPanel(new GridLayout(4, 2));
+        JPanel comboboxPanel = new JPanel(new BorderLayout(5, 5));
 
         createDataPanel.add(applicationLabel);
         createDataPanel.add(applicationField);
@@ -101,8 +104,10 @@ public class CreateTabPanel extends JPanel {
         createDataPanel.add(emailField);
         createDataPanel.add(passwordLabel);
         createDataPanel.add(passwordField);
+        createDataPanel.setBorder(upperborder);
 
         comboboxPanel.add(programmType, BorderLayout.CENTER);
+        comboboxPanel.setBorder(upperborder);
 
         dataPanel.add(createDataPanel);
         dataPanel.add(comboboxPanel);
@@ -113,10 +118,12 @@ public class CreateTabPanel extends JPanel {
         return upperPanel;
     }
 
-    private JPanel createLowerPanel(){
-        JPanel lowerPanel = new JPanel(new BorderLayout(5,5));
+    private JPanel createLowerPanel() {
+        Border lowerborder = BorderFactory.createEmptyBorder(13, 150, 23, 150);
+        JPanel lowerPanel = new JPanel(new BorderLayout(5, 5));
 
         lowerPanel.add(createButton, BorderLayout.CENTER);
+        lowerPanel.setBorder(lowerborder);
 
         return lowerPanel;
     }

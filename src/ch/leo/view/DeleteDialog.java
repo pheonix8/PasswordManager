@@ -27,7 +27,7 @@ public class DeleteDialog extends JDialog {
     public DeleteDialog(String title, DefaultListModel<Application> applicationModel) {
         this.title = title;
         setTitle(title);
-        setSize(300,125);
+        setSize(300, 125);
 
         deleteLabel = new JLabel("Do you really want to delete the item: " + title + " ?");
         buttonPanel = new JPanel();
@@ -47,7 +47,7 @@ public class DeleteDialog extends JDialog {
             }
         });
 
-        setLayout(new BorderLayout(10,10));
+        setLayout(new BorderLayout(10, 10));
 
         add(deleteLabel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);

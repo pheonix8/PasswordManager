@@ -4,6 +4,7 @@ import ch.leo.model.*;
 import ch.leo.view.*;
 
 import javax.swing.*;
+import java.util.Vector;
 
 
 /**
@@ -19,12 +20,13 @@ public class PasswordManagerStart {
 
         Compilation c = new Compilation();
         Types t = new Types();
+        AllUsers au = new AllUsers();
 
-        new DataInitialization(c,t);
+        new DataInitialization(c, t, au);
         System.out.println(c);
         System.out.println(t);
 
-        PasswortmanagerGUI passwortmanagerGUI = new PasswortmanagerGUI(c,t);
+        PasswordManagerLoginGUI passwordManagerLoginGUI = new PasswordManagerLoginGUI(c, t, au);
 
     }
 }

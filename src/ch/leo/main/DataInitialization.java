@@ -13,22 +13,28 @@ public class DataInitialization {
 
     private Compilation compilation;
     private Types types;
+    private AllUsers allUsers;
 
-    public DataInitialization(Compilation compilation, Types types) {
+    public DataInitialization(Compilation compilation, Types types, AllUsers allUsers) {
         this.compilation = compilation;
         this.types = types;
+        this.allUsers = allUsers;
 
         types.addType("Gamelauncher");
         types.addType("Mail");
         types.addType("Music");
         types.addType("Others");
 
+        allUsers.readfile();
+
         compilation.readfile();
+
     }
 
     public static void main(String[] args) {
         Compilation c = new Compilation();
         Types t = new Types();
-        DataInitialization di = new DataInitialization(c,t);
+        AllUsers au = new AllUsers();
+        DataInitialization di = new DataInitialization(c, t, au);
     }
 }

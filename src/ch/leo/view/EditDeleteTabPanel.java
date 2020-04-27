@@ -5,6 +5,7 @@ import ch.leo.controller.SearchController;
 import ch.leo.model.*;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,7 +34,7 @@ public class EditDeleteTabPanel extends JPanel {
     private JButton deleteButton;
 
     public EditDeleteTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
-        this.setLayout(new BorderLayout(10,10));
+        this.setLayout(new BorderLayout(10, 10));
 
         this.typeModel = typeModel;
         this.applicationModel = applicationModel;
@@ -48,10 +49,10 @@ public class EditDeleteTabPanel extends JPanel {
 
         searchLabel = new JLabel("Enter item:");
         searchField = new JTextField();
-        searchField.setPreferredSize(new Dimension(200,20));
+        searchField.setPreferredSize(new Dimension(200, 20));
         searchField.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
-                EditDeleteController.onDataEntered(searchField,applicationModel,deleteButton,editButton);
+                EditDeleteController.onDataEntered(searchField, applicationModel, deleteButton, editButton);
             }
         });
 
@@ -62,19 +63,22 @@ public class EditDeleteTabPanel extends JPanel {
         deleteButton.addActionListener(e -> EditDeleteController.onClickDeleteWindow(searchField, applicationModel));
 
         add(editdeleteUpperPanel(), BorderLayout.CENTER);
-        add(searchLowerPanel(), BorderLayout.SOUTH );
+        add(searchLowerPanel(), BorderLayout.SOUTH);
 
         editButton.setEnabled(false);
         deleteButton.setEnabled(false);
 
     }
 
-    private JPanel editdeleteUpperPanel(){
-        JPanel upperPanel = new JPanel(new BorderLayout(5,5));
-        JPanel comboboxPanel = new JPanel(new BorderLayout(5, 5));
-        JPanel listPanel = new JPanel(new BorderLayout(5, 5));
+    private JPanel editdeleteUpperPanel() {
+        Border border = BorderFactory.createEmptyBorder(50, 0, 100, 0);
+
+        JPanel upperPanel = new JPanel(new BorderLayout());
+        JPanel comboboxPanel = new JPanel(new BorderLayout());
+        JPanel listPanel = new JPanel(new BorderLayout());
 
         comboboxPanel.add(programmType, BorderLayout.WEST);
+        comboboxPanel.setBorder(border);
         listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
 
         upperPanel.add(comboboxPanel, BorderLayout.WEST);
@@ -87,7 +91,7 @@ public class EditDeleteTabPanel extends JPanel {
     private JPanel searchLowerPanel() {
         JPanel lowerPanel = new JPanel(new BorderLayout(5, 5));
         JPanel textPanel = new JPanel(new FlowLayout());
-        JPanel buttonPanel = new JPanel(new BorderLayout(5,5));
+        JPanel buttonPanel = new JPanel(new BorderLayout(5, 5));
 
         textPanel.add(searchLabel);
         textPanel.add(searchField);
@@ -100,7 +104,6 @@ public class EditDeleteTabPanel extends JPanel {
 
         return lowerPanel;
     }
-
 
 
 }

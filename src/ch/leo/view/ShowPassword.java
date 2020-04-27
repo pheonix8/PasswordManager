@@ -30,19 +30,19 @@ public class ShowPassword extends JDialog {
         this.title = title;
         setTitle(title);
 
-        setSize(250,125);
-        setLayout(new BorderLayout(10,10));
+        setSize(250, 125);
+        setLayout(new BorderLayout(10, 10));
 
         ValidateSearch validateSearch = new ValidateSearch();
 
         usernameLabel = new JLabel("Username:");
-        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getUsername());
+        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getUsername());
 
         emailLabel = new JLabel("E-Mail:");
-        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getEmail());
+        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getEmail());
 
         passwordLabel = new JLabel("Password:");
-        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getPassword());
+        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getPassword());
 
         usernameField.setEditable(false);
         emailField.setEditable(false);
@@ -56,7 +56,7 @@ public class ShowPassword extends JDialog {
 
 
     protected void init() {
-        JPanel dataPanel = new JPanel(new GridLayout(4,2));
+        JPanel dataPanel = new JPanel(new GridLayout(4, 2));
 
         dataPanel.add(usernameLabel);
         dataPanel.add(usernameField);

@@ -24,25 +24,25 @@ public class Compilation extends DefaultListModel<Application> {
         selectedType = null;
     }
 
-    public  int getOriginalSize(){
+    public int getOriginalSize() {
         return allApplications.size();
     }
 
-    public int getSelectedSize(){
+    public int getSelectedSize() {
         return selectedApplications.size();
     }
 
-    public void addApplication(Application application){
+    public void addApplication(Application application) {
         allApplications.add(application);
         selectedApplications.add(application);
     }
 
-    public String getApplication(int index){
+    public String getApplication(int index) {
         return allApplications.get(index).getApplication();
 
     }
 
-    public void removeApplication(Application application){
+    public void removeApplication(Application application) {
         allApplications.remove(application);
     }
 
@@ -70,12 +70,12 @@ public class Compilation extends DefaultListModel<Application> {
             return selectedApplications.get(index);
     }
 
-    public  void setSelectedType(String type) {
+    public void setSelectedType(String type) {
         selectedApplications.clear();
         selectedType = type;
         System.out.println("Type = " + selectedType);
         for (Application application : allApplications) {
-            if ( application.getType().compareToIgnoreCase(type) == 0)
+            if (application.getType().compareToIgnoreCase(type) == 0)
                 selectedApplications.add(application);
         }
         this.fireContentsChanged(this, 0, selectedApplications.size());
@@ -83,19 +83,19 @@ public class Compilation extends DefaultListModel<Application> {
 
     public void addElement(Application application) {
         addApplication(application);
-        this.fireIntervalAdded(this, getSize()-1, getSize());
+        this.fireIntervalAdded(this, getSize() - 1, getSize());
     }
 
     @Override
     public boolean removeElement(Object obj) {
         boolean success = false;
         allApplications.removeElement(obj);
-        success =  selectedApplications.removeElement(obj);
-        this.fireIntervalRemoved(this,0,getSize());
+        success = selectedApplications.removeElement(obj);
+        this.fireIntervalRemoved(this, 0, getSize());
         return success;
     }
 
-    public void createfile(){
+    public void createfile() {
 
         PrintStream out = null;
 
@@ -106,9 +106,9 @@ public class Compilation extends DefaultListModel<Application> {
             for (int i = 0; i < allApplications.size(); i++) {
                 out.println(allApplications.elementAt(i));
             }
-        } catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println("ArrayIndexOutOfBoundsException Error:" + e.getMessage());
-        } catch (IOException e){
+        } catch (IOException e) {
             System.err.println("IOException: " + e.getMessage());
         } finally {
             if (out != null) {
@@ -121,13 +121,13 @@ public class Compilation extends DefaultListModel<Application> {
 
     }
 
-    public void readfile(){
+    public void readfile() {
 
         try {
             Stream<String> lines = Files.lines(Paths.get("AllApplications_passwords.txt"));
             lines.forEach((String t) -> {
                 String[] parse = t.split(",");
-                if(parse.length<2) return;
+                if (parse.length < 2) return;
                 allApplications.add(new Application(parse[0], parse[1], parse[2], parse[3], parse[4]));
             });
         } catch (IOException ex) {

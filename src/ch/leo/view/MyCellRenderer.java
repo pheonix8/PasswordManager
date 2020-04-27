@@ -18,10 +18,10 @@ public class MyCellRenderer extends JPanel implements ListCellRenderer<Object> {
     JTextField applicationName;
     JScrollPane scrollPane;
 
-    MyCellRenderer(){
+    MyCellRenderer() {
         typeName = new JTextField(12);
         typeName.setEditable(false);
-        typeName.setBackground(new Color(248,240,176));
+        typeName.setBackground(new Color(248, 240, 176));
         applicationName = new JTextField(12);
         applicationName.setEditable(false);
     }
@@ -32,11 +32,10 @@ public class MyCellRenderer extends JPanel implements ListCellRenderer<Object> {
             Object value,
             int index,
             boolean isSelected,
-            boolean cellHasFocus)
-    {
+            boolean cellHasFocus) {
         this.setLayout(new BorderLayout());
-        typeName.setText( ((Application)value).getType() );
-        applicationName.setText( ((Application)value).getApplication() );
+        typeName.setText(((Application) value).getType());
+        applicationName.setText(((Application) value).getApplication());
         this.add(typeName, BorderLayout.NORTH);
         this.add(applicationName, BorderLayout.SOUTH);
         return this;

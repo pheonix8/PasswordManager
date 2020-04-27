@@ -15,11 +15,11 @@ import java.awt.event.ActionEvent;
  */
 public class EditDeleteController {
 
-    public static void onTypeSelection(JComboBox<String> programmType, DefaultListModel<Application> applicationModel){
-        ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
+    public static void onTypeSelection(JComboBox<String> programmType, DefaultListModel<Application> applicationModel) {
+        ((Compilation) applicationModel).setSelectedType(programmType.getSelectedItem().toString());
     }
 
-    public static void onClickDeleteWindow(JTextField searchField, DefaultListModel<Application> applicationModel){
+    public static void onClickDeleteWindow(JTextField searchField, DefaultListModel<Application> applicationModel) {
         String getValue;
         DeleteDialog deleteDialog = new DeleteDialog(getValue = searchField.getText(), applicationModel);
     }
@@ -29,14 +29,13 @@ public class EditDeleteController {
         EditDialog editDialog = new EditDialog(typeModel, getValue = searchField.getText(), applicationModel);
     }
 
-    public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton deleteButton, JButton editButton){
+    public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton deleteButton, JButton editButton) {
         ValidateSearch validateSearch = new ValidateSearch();
 
-        if (validateSearch.validateSearch(searchField, applicationModel) == true){
+        if (validateSearch.validateSearch(searchField, applicationModel) == true) {
             deleteButton.setEnabled(true);
             editButton.setEnabled(true);
-        }
-        else {
+        } else {
             deleteButton.setEnabled(false);
             editButton.setEnabled(false);
         }
@@ -56,7 +55,7 @@ public class EditDeleteController {
         ValidateSearch validateSearch = new ValidateSearch();
 
         applicationModel.removeElement(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)));
-        ((Compilation)applicationModel).createfile();
+        ((Compilation) applicationModel).createfile();
     }
 
 

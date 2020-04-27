@@ -5,6 +5,7 @@ import ch.leo.controller.SearchController;
 import ch.leo.model.*;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,7 +40,7 @@ public class SearchTabPanel extends JPanel {
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
-        programmType.addActionListener(e -> SearchController.onTypeSelection(programmType,applicationModel));
+        programmType.addActionListener(e -> SearchController.onTypeSelection(programmType, applicationModel));
 
         applications = new JList<Application>(this.applicationModel);
         applications.setCellRenderer(new MyCellRenderer());
@@ -50,10 +51,10 @@ public class SearchTabPanel extends JPanel {
 
         searchField.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
-                SearchController.onDataEntered(searchField,applicationModel,searchButton);
+                SearchController.onDataEntered(searchField, applicationModel, searchButton);
             }
         });
-        searchButton.addActionListener(e -> SearchController.onClickShowOpen(searchField,applicationModel));
+        searchButton.addActionListener(e -> SearchController.onClickShowOpen(searchField, applicationModel));
 
         this.add(searchUpperPanel(), BorderLayout.CENTER);
         this.add(searchLowerPanel(), BorderLayout.SOUTH);
@@ -64,11 +65,14 @@ public class SearchTabPanel extends JPanel {
     }
 
     private JPanel searchUpperPanel() {
-        JPanel upperPanel = new JPanel(new BorderLayout(5, 5));
-        JPanel comboboxPanel = new JPanel(new BorderLayout(5, 5));
-        JPanel listPanel = new JPanel(new BorderLayout(5, 5));
+        Border upperborder = BorderFactory.createEmptyBorder(50, 0, 100, 0);
+
+        JPanel upperPanel = new JPanel(new BorderLayout());
+        JPanel comboboxPanel = new JPanel(new BorderLayout());
+        JPanel listPanel = new JPanel(new BorderLayout());
 
         comboboxPanel.add(programmType, BorderLayout.WEST);
+        comboboxPanel.setBorder(upperborder);
         listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
 
         upperPanel.add(comboboxPanel, BorderLayout.WEST);
@@ -79,11 +83,14 @@ public class SearchTabPanel extends JPanel {
     }
 
     private JPanel searchLowerPanel() {
+        Border lowerborder = BorderFactory.createEmptyBorder(13, 0, 23, 0);
+
         JPanel lowerPanel = new JPanel(new BorderLayout(10, 10));
 
         lowerPanel.add(searchLabel, BorderLayout.WEST);
         lowerPanel.add(searchField, BorderLayout.CENTER);
         lowerPanel.add(searchButton, BorderLayout.EAST);
+        lowerPanel.setBorder(lowerborder);
 
         return lowerPanel;
     }

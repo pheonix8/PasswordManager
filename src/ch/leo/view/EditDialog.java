@@ -42,8 +42,8 @@ public class EditDialog extends JDialog {
         this.title = title;
         setTitle(title);
 
-        setSize(400,200);
-        setLayout(new BorderLayout(10,10));
+        setSize(400, 200);
+        setLayout(new BorderLayout(10, 10));
 
         this.typeModel = typeModel;
 
@@ -52,19 +52,19 @@ public class EditDialog extends JDialog {
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
-        programmType.setSelectedItem(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getType());
+        programmType.setSelectedItem(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getType());
 
         applicationLabel = new JLabel("Application:");
-        applicationField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getApplication());
+        applicationField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getApplication());
 
         usernameLabel = new JLabel("Username:");
-        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getUsername());
+        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getUsername());
 
         emailLabel = new JLabel("E-Mail:");
-        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getEmail());
+        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getEmail());
 
         passwordLabel = new JLabel("Password:");
-        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title,applicationModel)).getPassword());
+        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getPassword());
 
         saveButton = new JButton("Save");
         cancelButton = new JButton("Cancel");
@@ -81,7 +81,7 @@ public class EditDialog extends JDialog {
                         passwordField,
                         usernameField,
                         applicationField,
-                        emailField,programmType,
+                        emailField, programmType,
                         applicationModel,
                         title);
                 dispose();
@@ -94,11 +94,11 @@ public class EditDialog extends JDialog {
         setVisible(true);
     }
 
-    private JPanel editUpperPanel(){
-        JPanel upperPanel = new JPanel(new BorderLayout(5,5));
-        JPanel dataPanel = new JPanel(new GridLayout(1,2));
-        JPanel createDataPanel = new JPanel(new GridLayout(4,2));
-        JPanel comboboxPanel = new JPanel(new BorderLayout(5,5));
+    private JPanel editUpperPanel() {
+        JPanel upperPanel = new JPanel(new BorderLayout(5, 5));
+        JPanel dataPanel = new JPanel(new GridLayout(1, 2));
+        JPanel createDataPanel = new JPanel(new GridLayout(4, 2));
+        JPanel comboboxPanel = new JPanel(new BorderLayout(5, 5));
 
         createDataPanel.add(applicationLabel);
         createDataPanel.add(applicationField);
@@ -119,8 +119,8 @@ public class EditDialog extends JDialog {
         return upperPanel;
     }
 
-    private JPanel editLowerPanel(){
-        JPanel lowerPanel = new JPanel(new BorderLayout(5,5));
+    private JPanel editLowerPanel() {
+        JPanel lowerPanel = new JPanel(new BorderLayout(5, 5));
 
         lowerPanel.add(cancelButton, BorderLayout.WEST);
         lowerPanel.add(saveButton, BorderLayout.EAST);

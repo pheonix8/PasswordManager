@@ -16,21 +16,20 @@ import java.awt.event.ActionEvent;
  */
 public class SearchController {
 
-    public static void onTypeSelection(JComboBox<String> programmType, DefaultListModel<Application> applicationModel){
-        ((Compilation)applicationModel).setSelectedType(programmType.getSelectedItem().toString());
+    public static void onTypeSelection(JComboBox<String> programmType, DefaultListModel<Application> applicationModel) {
+        ((Compilation) applicationModel).setSelectedType(programmType.getSelectedItem().toString());
     }
 
     public static void onClickShowOpen(JTextField searchField, DefaultListModel<Application> applicationModel) {
         String getValue;
-        ShowPassword showPassword = new ShowPassword( getValue = searchField.getText(), applicationModel);
+        ShowPassword showPassword = new ShowPassword(getValue = searchField.getText(), applicationModel);
     }
 
-    public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton searchButton){
+    public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton searchButton) {
         ValidateSearch validateSearch = new ValidateSearch();
-        if (validateSearch.validateSearch(searchField, applicationModel) == true){
-                searchButton.setEnabled(true);
-        }
-        else {
+        if (validateSearch.validateSearch(searchField, applicationModel) == true) {
+            searchButton.setEnabled(true);
+        } else {
             searchButton.setEnabled(false);
         }
     }

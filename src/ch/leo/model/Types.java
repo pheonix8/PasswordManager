@@ -17,31 +17,31 @@ public class Types extends DefaultComboBoxModel<String> {
 
     private Vector<String> types;
 
-    public Types(){
+    public Types() {
         this.types = new Vector<String>();
     }
 
-    public void addType(String type){
+    public void addType(String type) {
         types.add(type);
     }
 
-    public void removeType(int index){
+    public void removeType(int index) {
         types.remove(index);
     }
 
-    public  String toString() {
+    public String toString() {
         String out = "Types: ";
         for (String type : types) {
-            out += type+", ";
+            out += type + ", ";
         }
         return out;
     }
 
-    public String getElementAt(int index){
+    public String getElementAt(int index) {
         return types.get(index);
     }
 
-    public int getSize(){
+    public int getSize() {
         return types.size();
     }
 

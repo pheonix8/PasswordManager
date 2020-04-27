@@ -15,26 +15,26 @@ import javax.swing.*;
  */
 public class CreateController {
 
-    public static void onDataEntered(JComboBox<String> programmType){
+
+    public static void onDataEntered(JComboBox<String> programmType) {
         programmType.setEnabled(true);
     }
-
 
 
     public static void onTypeSelection(JButton createButton) {
         createButton.setEnabled(true);
     }
 
-    public static void onApplicationAdded(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, JButton createButton, DefaultListModel<Application> applicationModel){
+    public static void onApplicationAdded(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, JButton createButton, DefaultListModel<Application> applicationModel) {
         Application newApplication = new Application(
-                passField.getText(),
-                userField.getText(),
                 appField.getText(),
+                userField.getText(),
+                passField.getText(),
                 emField.getText(),
                 programmType.getSelectedItem().toString());
 
         applicationModel.addElement(newApplication);
-        ((Compilation)applicationModel).createfile();
+        ((Compilation) applicationModel).createfile();
 
         passField.setText("");
         userField.setText("");
@@ -44,7 +44,6 @@ public class CreateController {
         createButton.setEnabled(false);
 
     }
-
 
 
 }

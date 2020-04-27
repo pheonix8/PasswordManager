@@ -22,7 +22,7 @@ public class Application {
         this.type = type;
     }
 
-    public void setApplication(String application, String type){
+    public void setApplication(String application, String type) {
         setApplication(application);
         setType(type);
     }
@@ -69,7 +69,7 @@ public class Application {
 
     @Override
     public String toString() {
-        return "" + application + ","
+        return application + ","
                 + username + ","
                 + password + ","
                 + email + ","
