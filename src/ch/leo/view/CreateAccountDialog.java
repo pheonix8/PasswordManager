@@ -2,6 +2,7 @@ package ch.leo.view;
 
 import ch.leo.controller.EditDeleteController;
 import ch.leo.controller.LoginController;
+import ch.leo.model.AllCompilations;
 import ch.leo.model.AllUsers;
 import ch.leo.model.User;
 
@@ -21,6 +22,7 @@ import java.util.Vector;
 public class CreateAccountDialog extends JDialog {
 
     private AllUsers allUsers;
+    private AllCompilations allCompilations;
 
     private JPanel upperPanel;
     private JPanel lowerPanel;
@@ -36,15 +38,17 @@ public class CreateAccountDialog extends JDialog {
     /**
      * Instantiates a new Create account dialog.
      *
-     * @param allUsers the all users
+     * @param allUsers        the all users
+     * @param allCompilations the all compilations
      */
-    public CreateAccountDialog(AllUsers allUsers) {
+    public CreateAccountDialog(AllUsers allUsers, AllCompilations allCompilations) {
         setTitle("Create Account");
         setSize(300, 125);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
 
         this.allUsers = allUsers;
+        this.allCompilations = allCompilations;
 
         upperPanel = new JPanel(new GridLayout(2, 2));
         lowerPanel = new JPanel();
@@ -62,7 +66,7 @@ public class CreateAccountDialog extends JDialog {
 
         createButton = new JButton("Create");
         createButton.setEnabled(false);
-        createButton.addActionListener(e -> LoginController.onUserAdd(userField, emailField, createButton, allUsers));
+        createButton.addActionListener(e -> LoginController.onUserAdd(userField, emailField, createButton, allUsers, allCompilations));
 
         init();
         setVisible(true);

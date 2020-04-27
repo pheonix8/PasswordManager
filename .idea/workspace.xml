@@ -26,20 +26,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="Fully Functional + java Doc&#10;*Email didnt work">
-      <change afterPath="$PROJECT_DIR$/Compilations/guestAllApplications_passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/main/LoginInitialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/leo/model/AllCompilations.java" afterDir="false" />
+    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AllApplications_passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Compilations/leoAllApplications_passwords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compilations/leoAllApplications_passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Compilations/leoAllApplications_passwords.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/AllUsers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User/AllUsers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateAccountDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateAccountDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswordManagerLoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswordManagerLoginGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +169,8 @@
       <workItem from="1587721223001" duration="50000" />
       <workItem from="1587817520604" duration="2914000" />
       <workItem from="1587969370888" duration="18147000" />
-      <workItem from="1588004042424" duration="6126000" />
+      <workItem from="1588004042424" duration="6200000" />
+      <workItem from="1588010863070" duration="508000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit &#10;Model Classes &#10;one GUI">
       <created>1586772663658</created>
@@ -270,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588005019151</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fully Functional + java Doc&#10;*Email dont work&#10;*No encryption">
+      <created>1588010677129</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1588010677129</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +314,8 @@
     <MESSAGE value="fully functional&#10; only no login &#10; and better look&#10; is to do" />
     <MESSAGE value="Fully Functional &#10;*Email didnt work&#10;*every Account can see every Password" />
     <MESSAGE value="Fully Functional + java Doc&#10;*Email didnt work&#10;*every Account can see every Password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fully Functional + java Doc&#10;*Email didnt work&#10;*every Account can see every Password" />
+    <MESSAGE value="Fully Functional + java Doc&#10;*Email dont work&#10;*No encryption" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully Functional + java Doc&#10;*Email dont work&#10;*No encryption" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="358" key="#Project_Structure" timestamp="1587035420421">
@@ -341,10 +342,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1667" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587555580337" />
-    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2" timestamp="1588010524260">
+    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2" timestamp="1588010676688">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588010524260" />
+    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588010676688" />
     <state x="0" y="0" key="DiffContextDialog" timestamp="1587466666556">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -357,22 +358,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="484" y="640" key="GitCloneDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773071156" />
-    <state width="1537" height="696" key="GridCell.Tab.0.bottom" timestamp="1588010425751">
+    <state width="1537" height="696" key="GridCell.Tab.0.bottom" timestamp="1588011096289">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
-    <state width="1537" height="696" key="GridCell.Tab.0.center" timestamp="1588010425751">
+    <state width="1537" height="696" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1588011096289" />
+    <state width="1537" height="696" key="GridCell.Tab.0.center" timestamp="1588011096289">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
-    <state width="1537" height="696" key="GridCell.Tab.0.left" timestamp="1588010425751">
+    <state width="1537" height="696" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1588011096289" />
+    <state width="1537" height="696" key="GridCell.Tab.0.left" timestamp="1588011096289">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
-    <state width="1537" height="696" key="GridCell.Tab.0.right" timestamp="1588010425751">
+    <state width="1537" height="696" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1588011096289" />
+    <state width="1537" height="696" key="GridCell.Tab.0.right" timestamp="1588011096289">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
+    <state width="1537" height="696" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1588011096289" />
     <state width="1537" height="457" key="GridCell.Tab.1.bottom" timestamp="1588004025536">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -401,10 +402,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="255" y="361" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1588003944924" />
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1588005021754">
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1588010679565">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1588005021754" />
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1588010679565" />
     <state width="624" height="700" key="XDebugger.FullValuePopup" timestamp="1587473446109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

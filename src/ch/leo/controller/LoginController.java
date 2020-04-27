@@ -1,6 +1,7 @@
 package ch.leo.controller;
 
 import ch.leo.main.DataInitialization;
+import ch.leo.main.LoginInitialization;
 import ch.leo.model.*;
 import ch.leo.view.CreateAccountDialog;
 import ch.leo.view.PasswordManagerLoginGUI;
@@ -79,17 +80,6 @@ public class LoginController {
 
     }
 
-
-    /**
-     * On click create account window.
-     *
-     * @param allUsers the all users
-     */
-    public static void onClickCreateAccountWindow(AllUsers allUsers) {
-        CreateAccountDialog createAccountDialog = new CreateAccountDialog(allUsers);
-    }
-
-
     /**
      * On click start.
      *
@@ -102,6 +92,16 @@ public class LoginController {
 
         DataInitialization dataInitialization = new DataInitialization(allCompilations, types, name);
 
+    }
+
+    /**
+     * On click create account window.
+     *
+     * @param allUsers        the all users
+     * @param allCompilations the all compilations
+     */
+    public static void onClickCreateAccountWindow(AllUsers allUsers, AllCompilations allCompilations) {
+        CreateAccountDialog createAccountDialog = new CreateAccountDialog(allUsers,allCompilations);
     }
 
 
@@ -129,12 +129,13 @@ public class LoginController {
     /**
      * On user add.
      *
-     * @param userField    the user field
-     * @param emailField   the email field
-     * @param createButton the create button
-     * @param allUsers     the all users
+     * @param userField       the user field
+     * @param emailField      the email field
+     * @param createButton    the create button
+     * @param allUsers        the all users
+     * @param allCompilations the all compilations
      */
-    public static void onUserAdd(JTextField userField, JTextField emailField, JButton createButton, AllUsers allUsers) {
+    public static void onUserAdd(JTextField userField, JTextField emailField, JButton createButton, AllUsers allUsers, AllCompilations allCompilations) {
         User newUser = new User(
                 userField.getText(),
                 emailField.getText()
@@ -142,6 +143,8 @@ public class LoginController {
 
         allUsers.addUser(newUser);
         allUsers.createfile();
+
+        LoginInitialization loginInitialization = new LoginInitialization(allUsers, allCompilations);
 
         userField.setText("");
         emailField.setText("");

@@ -86,7 +86,7 @@ public class PasswordManagerLoginGUI extends JFrame {
         });
 
         createAccountButton = new JButton("Create Account");
-        createAccountButton.addActionListener(e -> LoginController.onClickCreateAccountWindow(allUsers));
+        createAccountButton.addActionListener(e -> LoginController.onClickCreateAccountWindow(allUsers, allCompilations));
 
         setMinimumSize(new Dimension(300, 200));
 
