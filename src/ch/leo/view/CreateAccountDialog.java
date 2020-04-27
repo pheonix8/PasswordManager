@@ -33,6 +33,11 @@ public class CreateAccountDialog extends JDialog {
 
     private JButton createButton;
 
+    /**
+     * Instantiates a new Create account dialog.
+     *
+     * @param allUsers the all users
+     */
     public CreateAccountDialog(AllUsers allUsers) {
         setTitle("Create Account");
         setSize(300, 125);

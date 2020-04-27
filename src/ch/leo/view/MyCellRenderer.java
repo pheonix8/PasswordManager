@@ -14,10 +14,22 @@ import java.awt.*;
  */
 public class MyCellRenderer extends JPanel implements ListCellRenderer<Object> {
 
+    /**
+     * The Type name.
+     */
     JTextField typeName;
+    /**
+     * The Application name.
+     */
     JTextField applicationName;
+    /**
+     * The Scroll pane.
+     */
     JScrollPane scrollPane;
 
+    /**
+     * Instantiates a new My cell renderer.
+     */
     MyCellRenderer() {
         typeName = new JTextField(12);
         typeName.setEditable(false);

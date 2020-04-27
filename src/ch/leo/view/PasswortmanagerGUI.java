@@ -22,6 +22,12 @@ public class PasswortmanagerGUI extends JFrame {
     private CreateTabPanel createTab;
     private EditDeleteTabPanel editDeleteTab;
 
+    /**
+     * Instantiates a new Passwortmanager gui.
+     *
+     * @param applicationModel the application model
+     * @param typeModel        the type model
+     */
     public PasswortmanagerGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<String> typeModel) {
 
         super("Passwordmanager");

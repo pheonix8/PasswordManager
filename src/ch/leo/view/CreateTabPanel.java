@@ -39,6 +39,12 @@ public class CreateTabPanel extends JPanel {
 
     private JButton createButton;
 
+    /**
+     * Instantiates a new Create tab panel.
+     *
+     * @param typeModel        the type model
+     * @param applicationModel the application model
+     */
     public CreateTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         this.setLayout(new BorderLayout(10, 10));
 

@@ -17,14 +17,27 @@ public class Types extends DefaultComboBoxModel<String> {
 
     private Vector<String> types;
 
+    /**
+     * Instantiates a new Types.
+     */
     public Types() {
         this.types = new Vector<String>();
     }
 
+    /**
+     * Add type.
+     *
+     * @param type the type
+     */
     public void addType(String type) {
         types.add(type);
     }
 
+    /**
+     * Remove type.
+     *
+     * @param index the index
+     */
     public void removeType(int index) {
         types.remove(index);
     }

@@ -29,22 +29,44 @@ public class AllUsers {
 
     private String code = createCode();
 
+    /**
+     * Instantiates a new All users.
+     */
     public AllUsers() {
         allUsers = new Vector<User>();
     }
 
+    /**
+     * Add user.
+     *
+     * @param user the user
+     */
     public void addUser(User user) {
         allUsers.add(user);
     }
 
+    /**
+     * Gets element at.
+     *
+     * @param index the index
+     * @return the element at
+     */
     public User getElementAt(int index) {
         return allUsers.get(index);
     }
 
+    /**
+     * Gets size.
+     *
+     * @return the size
+     */
     public int getSize() {
         return allUsers.size();
     }
 
+    /**
+     * Createfile.
+     */
     public void createfile() {
 
         PrintStream out = null;
@@ -71,6 +93,9 @@ public class AllUsers {
 
     }
 
+    /**
+     * Readfile.
+     */
     public void readfile() {
 
         try {
@@ -86,6 +111,11 @@ public class AllUsers {
 
     }
 
+    /**
+     * Send email.
+     *
+     * @param i the
+     */
     public void sendEmail(int i) {
 
         final String username = "passw0rdmanager.host1@gmail.com";
@@ -122,6 +152,11 @@ public class AllUsers {
         }
     }
 
+    /**
+     * Create code string.
+     *
+     * @return the string
+     */
     public String createCode() {
         String CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
         String CHAR_UPPER = CHAR_LOWER.toUpperCase();
@@ -142,6 +177,11 @@ public class AllUsers {
         return sb.toString();
     }
 
+    /**
+     * Gets code.
+     *
+     * @return the code
+     */
     public String getCode() {
         return code;
     }

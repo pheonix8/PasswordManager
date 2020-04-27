@@ -38,6 +38,13 @@ public class EditDialog extends JDialog {
     private JButton saveButton;
     private JButton cancelButton;
 
+    /**
+     * Instantiates a new Edit dialog.
+     *
+     * @param typeModel        the type model
+     * @param title            the title
+     * @param applicationModel the application model
+     */
     public EditDialog(DefaultComboBoxModel<String> typeModel, String title, DefaultListModel<Application> applicationModel) {
         this.title = title;
         setTitle(title);

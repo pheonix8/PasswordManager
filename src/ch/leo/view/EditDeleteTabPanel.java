@@ -33,6 +33,12 @@ public class EditDeleteTabPanel extends JPanel {
     private JButton editButton;
     private JButton deleteButton;
 
+    /**
+     * Instantiates a new Edit delete tab panel.
+     *
+     * @param typeModel        the type model
+     * @param applicationModel the application model
+     */
     public EditDeleteTabPanel(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         this.setLayout(new BorderLayout(10, 10));
 
@@ -79,7 +85,11 @@ public class EditDeleteTabPanel extends JPanel {
 
         comboboxPanel.add(programmType, BorderLayout.WEST);
         comboboxPanel.setBorder(border);
-        listPanel.add(new JScrollPane(applications, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.CENTER);
+        listPanel.add(new JScrollPane(
+                applications,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER),
+                BorderLayout.CENTER);
 
         upperPanel.add(comboboxPanel, BorderLayout.WEST);
         upperPanel.add(listPanel, BorderLayout.CENTER);

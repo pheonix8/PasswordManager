@@ -16,15 +16,36 @@ import javax.swing.*;
 public class CreateController {
 
 
+    /**
+     * On data entered.
+     *
+     * @param programmType the programm type
+     */
     public static void onDataEntered(JComboBox<String> programmType) {
         programmType.setEnabled(true);
     }
 
 
+    /**
+     * On type selection.
+     *
+     * @param createButton the create button
+     */
     public static void onTypeSelection(JButton createButton) {
         createButton.setEnabled(true);
     }
 
+    /**
+     * On application added.
+     *
+     * @param passField        the pass field
+     * @param userField        the user field
+     * @param appField         the app field
+     * @param emField          the em field
+     * @param programmType     the programm type
+     * @param createButton     the create button
+     * @param applicationModel the application model
+     */
     public static void onApplicationAdded(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, JButton createButton, DefaultListModel<Application> applicationModel) {
         Application newApplication = new Application(
                 appField.getText(),

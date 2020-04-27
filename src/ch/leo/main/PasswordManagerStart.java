@@ -16,6 +16,11 @@ import java.util.Vector;
  */
 public class PasswordManagerStart {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
 
         Compilation c = new Compilation();

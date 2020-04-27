@@ -24,6 +24,12 @@ public class DeleteDialog extends JDialog {
     private JButton noButton;
     private JButton yesButton;
 
+    /**
+     * Instantiates a new Delete dialog.
+     *
+     * @param title            the title
+     * @param applicationModel the application model
+     */
     public DeleteDialog(String title, DefaultListModel<Application> applicationModel) {
         this.title = title;
         setTitle(title);

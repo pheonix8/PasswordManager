@@ -26,6 +26,12 @@ public class ShowPassword extends JDialog {
     private JLabel passwordLabel;
     private JTextField passwordField;
 
+    /**
+     * Instantiates a new Show password.
+     *
+     * @param title            the title
+     * @param applicationModel the application model
+     */
     public ShowPassword(String title, DefaultListModel<Application> applicationModel) {
         this.title = title;
         setTitle(title);
@@ -55,6 +61,9 @@ public class ShowPassword extends JDialog {
     }
 
 
+    /**
+     * Init.
+     */
     protected void init() {
         JPanel dataPanel = new JPanel(new GridLayout(4, 2));
 

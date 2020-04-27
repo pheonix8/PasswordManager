@@ -37,6 +37,13 @@ public class PasswordManagerLoginGUI extends JFrame {
 
     private JButton createAccountButton;
 
+    /**
+     * Instantiates a new Password manager login gui.
+     *
+     * @param applicationModel the application model
+     * @param typeModel        the type model
+     * @param allUsers         the all users
+     */
     public PasswordManagerLoginGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<String> typeModel, AllUsers allUsers) {
 
         super("Login");

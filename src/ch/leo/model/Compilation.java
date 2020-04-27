@@ -18,30 +18,59 @@ public class Compilation extends DefaultListModel<Application> {
     private Vector<Application> allApplications, selectedApplications;
     private String selectedType;
 
+    /**
+     * Instantiates a new Compilation.
+     */
     public Compilation() {
         allApplications = new Vector<Application>();
         selectedApplications = new Vector<Application>();
         selectedType = null;
     }
 
+    /**
+     * Gets original size.
+     *
+     * @return the original size
+     */
     public int getOriginalSize() {
         return allApplications.size();
     }
 
+    /**
+     * Gets selected size.
+     *
+     * @return the selected size
+     */
     public int getSelectedSize() {
         return selectedApplications.size();
     }
 
+    /**
+     * Add application.
+     *
+     * @param application the application
+     */
     public void addApplication(Application application) {
         allApplications.add(application);
         selectedApplications.add(application);
     }
 
+    /**
+     * Gets application.
+     *
+     * @param index the index
+     * @return the application
+     */
     public String getApplication(int index) {
         return allApplications.get(index).getApplication();
 
     }
 
+    /**
+     * Remove application.
+     *
+     * @param application the application
+     */
     public void removeApplication(Application application) {
         allApplications.remove(application);
     }
@@ -70,6 +99,11 @@ public class Compilation extends DefaultListModel<Application> {
             return selectedApplications.get(index);
     }
 
+    /**
+     * Sets selected type.
+     *
+     * @param type the type
+     */
     public void setSelectedType(String type) {
         selectedApplications.clear();
         selectedType = type;
@@ -95,6 +129,9 @@ public class Compilation extends DefaultListModel<Application> {
         return success;
     }
 
+    /**
+     * Createfile.
+     */
     public void createfile() {
 
         PrintStream out = null;
@@ -121,6 +158,9 @@ public class Compilation extends DefaultListModel<Application> {
 
     }
 
+    /**
+     * Readfile.
+     */
     public void readfile() {
 
         try {

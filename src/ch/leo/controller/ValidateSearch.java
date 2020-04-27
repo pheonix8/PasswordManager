@@ -16,6 +16,13 @@ import java.util.regex.Pattern;
 public class ValidateSearch {
 
 
+    /**
+     * Validate search boolean.
+     *
+     * @param searchField      the search field
+     * @param applicationModel the application model
+     * @return the boolean
+     */
     public boolean validateSearch(JTextField searchField, DefaultListModel<Application> applicationModel) {
         boolean validated = false;
         for (int i = 0; i < applicationModel.getSize(); i++) {
@@ -29,6 +36,13 @@ public class ValidateSearch {
         return validated;
     }
 
+    /**
+     * Gets validated index.
+     *
+     * @param title            the title
+     * @param applicationModel the application model
+     * @return the validated index
+     */
     public int getValidatedIndex(String title, DefaultListModel<Application> applicationModel) {
         int index = 50;
         for (int i = 0; i < applicationModel.getSize(); i++) {
@@ -40,12 +54,18 @@ public class ValidateSearch {
         return index;
     }
 
-
     /**
      * Login
      */
+
+    /**
+     * Validate email boolean
+     *
+     * @param emailField the email field
+     * @return the boolean
+     */
     public boolean validateEmail(JTextField emailField) {
-        Pattern p = Pattern.compile("^(.+)@(.+)$");
+        Pattern p = Pattern.compile("\\b[\\w.%-]+@[-.\\w]+\\.[A-Za-z]{2,4}\\b");
         Matcher m = p.matcher(emailField.getText());
         System.out.println(m.matches());
         boolean b = m.matches();
@@ -53,6 +73,13 @@ public class ValidateSearch {
         return b;
     }
 
+    /**
+     * Validate user boolean.
+     *
+     * @param userField the user field
+     * @param allUsers  the all users
+     * @return the boolean
+     */
     public boolean validateUser(JTextField userField, AllUsers allUsers) {
         boolean validated = false;
         for (int i = 0; i < allUsers.getSize(); i++) {
@@ -67,6 +94,13 @@ public class ValidateSearch {
         return validated;
     }
 
+    /**
+     * Validate password boolean.
+     *
+     * @param passwordField the password field
+     * @param allUsers      the all users
+     * @return the boolean
+     */
     public boolean validatePassword(JTextField passwordField, AllUsers allUsers) {
         boolean validated = false;
         for (int i = 0; i < allUsers.getSize(); i++) {
@@ -80,6 +114,13 @@ public class ValidateSearch {
         return validated;
     }
 
+    /**
+     * Gets login index.
+     *
+     * @param userField the user field
+     * @param allUsers  the all users
+     * @return the login index
+     */
     public int getLoginIndex(JTextField userField, AllUsers allUsers) {
         int index = 50;
         for (int i = 0; i < allUsers.getSize(); i++) {
