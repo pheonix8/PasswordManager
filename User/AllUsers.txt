@@ -1,2 +1,3 @@
 guest,guest@gmail.ch
 leo,leo.oetterli@gmx.ch
+test,test.tst@test.ch

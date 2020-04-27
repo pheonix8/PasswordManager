@@ -1,8 +1,7 @@
 package ch.leo.controller;
 
-import ch.leo.model.AllUsers;
-import ch.leo.model.Application;
-import ch.leo.model.User;
+import ch.leo.main.DataInitialization;
+import ch.leo.model.*;
 import ch.leo.view.CreateAccountDialog;
 import ch.leo.view.PasswordManagerLoginGUI;
 import ch.leo.view.PasswortmanagerGUI;
@@ -90,14 +89,19 @@ public class LoginController {
         CreateAccountDialog createAccountDialog = new CreateAccountDialog(allUsers);
     }
 
+
     /**
      * On click start.
      *
-     * @param applicationModel the application model
-     * @param typeModel        the type model
+     * @param allCompilations the all compilations
+     * @param userField       the user field
      */
-    public static void onClickStart(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<String> typeModel) {
-        PasswortmanagerGUI passwortmanagerGUI = new PasswortmanagerGUI(applicationModel, typeModel);
+    public static void onClickStart(AllCompilations allCompilations, JTextField userField) {
+        String name = userField.getText();
+        Types types = new Types();
+
+        DataInitialization dataInitialization = new DataInitialization(allCompilations, types, name);
+
     }
 
 

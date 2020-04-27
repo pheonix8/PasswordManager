@@ -17,14 +17,18 @@ import java.util.stream.Stream;
 public class Compilation extends DefaultListModel<Application> {
     private Vector<Application> allApplications, selectedApplications;
     private String selectedType;
+    private String name;
 
     /**
      * Instantiates a new Compilation.
+     *
+     * @param name the name
      */
-    public Compilation() {
+    public Compilation(String name) {
         allApplications = new Vector<Application>();
         selectedApplications = new Vector<Application>();
         selectedType = null;
+        this.name = name;
     }
 
     /**
@@ -100,6 +104,15 @@ public class Compilation extends DefaultListModel<Application> {
     }
 
     /**
+     * Get name string.
+     *
+     * @return the string
+     */
+    public String getName(){
+        return name;
+    }
+
+    /**
      * Sets selected type.
      *
      * @param type the type
@@ -133,12 +146,29 @@ public class Compilation extends DefaultListModel<Application> {
      * Createfile.
      */
     public void createfile() {
+        File file = new File("./Compilations/"+name+"AllApplications_passwords.txt");
+
+        if (!file.exists()){
+            try {
+                file.createNewFile();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+
+    /**
+     * Savefile.
+     */
+    public void savefile() {
 
         PrintStream out = null;
 
         try {
             System.out.println("Start writing to file");
-            out = new PrintStream(new FileOutputStream("AllApplications_passwords.txt"));
+            out = new PrintStream(new FileOutputStream("./Compilations/"+name+"AllApplications_passwords.txt"));
 
             for (int i = 0; i < allApplications.size(); i++) {
                 out.println(allApplications.elementAt(i));
@@ -164,7 +194,7 @@ public class Compilation extends DefaultListModel<Application> {
     public void readfile() {
 
         try {
-            Stream<String> lines = Files.lines(Paths.get("AllApplications_passwords.txt"));
+            Stream<String> lines = Files.lines(Paths.get("./Compilations/"+name+"AllApplications_passwords.txt"));
             lines.forEach((String t) -> {
                 String[] parse = t.split(",");
                 if (parse.length < 2) return;

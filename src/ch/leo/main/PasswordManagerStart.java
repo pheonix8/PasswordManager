@@ -23,15 +23,12 @@ public class PasswordManagerStart {
      */
     public static void main(String[] args) {
 
-        Compilation c = new Compilation();
-        Types t = new Types();
         AllUsers au = new AllUsers();
+        AllCompilations ac = new AllCompilations();
 
-        new DataInitialization(c, t, au);
-        System.out.println(c);
-        System.out.println(t);
+        new LoginInitialization(au, ac);
 
-        PasswordManagerLoginGUI passwordManagerLoginGUI = new PasswordManagerLoginGUI(c, t, au);
+        PasswordManagerLoginGUI passwordManagerLoginGUI = new PasswordManagerLoginGUI(au, ac);
 
     }
 }

@@ -26,31 +26,21 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="">
+    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="Fully Functional + java Doc&#10;*Email didnt work">
+      <change afterPath="$PROJECT_DIR$/Compilations/guestAllApplications_passwords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/leo/main/LoginInitialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/leo/model/AllCompilations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllApplications_passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Compilations/leoAllApplications_passwords.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/AllUsers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User/AllUsers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/ValidateSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/ValidateSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/AllUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/AllUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Types.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateAccountDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateAccountDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/DeleteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/DeleteDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/MyCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/MyCellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswordManagerLoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswordManagerLoginGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/SearchTabPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/ShowPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/ShowPassword.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +90,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\Compilations" />
       <recent name="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\User" />
       <recent name="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\lib" />
       <recent name="C:\Users\Leo Oetterli\IdeaProjects\PasswordManager\src\ch\leo\view" />
@@ -186,7 +177,7 @@
       <workItem from="1587721223001" duration="50000" />
       <workItem from="1587817520604" duration="2914000" />
       <workItem from="1587969370888" duration="18147000" />
-      <workItem from="1588004042424" duration="837000" />
+      <workItem from="1588004042424" duration="6126000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit &#10;Model Classes &#10;one GUI">
       <created>1586772663658</created>
@@ -272,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588004014536</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fully Functional + java Doc&#10;*Email didnt work&#10;*every Account can see every Password">
+      <created>1588005019151</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588005019151</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,17 +313,18 @@
     <MESSAGE value="Nearly done &#10;remove dont work&#10;save dont work&#10;Login in progress" />
     <MESSAGE value="fully functional&#10; only no login &#10; and better look&#10; is to do" />
     <MESSAGE value="Fully Functional &#10;*Email didnt work&#10;*every Account can see every Password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fully Functional &#10;*Email didnt work&#10;*every Account can see every Password" />
+    <MESSAGE value="Fully Functional + java Doc&#10;*Email didnt work&#10;*every Account can see every Password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully Functional + java Doc&#10;*Email didnt work&#10;*every Account can see every Password" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="358" key="#Project_Structure" timestamp="1587035420421">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="872" y="358" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1587035420421" />
-    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser" timestamp="1587997257278">
+    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser" timestamp="1588005900180">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1587997257278" />
+    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1588005900180" />
     <state x="1449" y="389" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1587998977678">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -342,10 +341,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1667" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587555580337" />
-    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2" timestamp="1588004014026">
+    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2" timestamp="1588010524260">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588004014026" />
+    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588010524260" />
     <state x="0" y="0" key="DiffContextDialog" timestamp="1587466666556">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -358,22 +357,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="484" y="640" key="GitCloneDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773071156" />
-    <state width="1537" height="696" key="GridCell.Tab.0.bottom" timestamp="1588004856652">
+    <state width="1537" height="696" key="GridCell.Tab.0.bottom" timestamp="1588010425751">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1588004856652" />
-    <state width="1537" height="696" key="GridCell.Tab.0.center" timestamp="1588004856652">
+    <state width="1537" height="696" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
+    <state width="1537" height="696" key="GridCell.Tab.0.center" timestamp="1588010425751">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1588004856652" />
-    <state width="1537" height="696" key="GridCell.Tab.0.left" timestamp="1588004856652">
+    <state width="1537" height="696" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
+    <state width="1537" height="696" key="GridCell.Tab.0.left" timestamp="1588010425751">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1588004856652" />
-    <state width="1537" height="696" key="GridCell.Tab.0.right" timestamp="1588004856652">
+    <state width="1537" height="696" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
+    <state width="1537" height="696" key="GridCell.Tab.0.right" timestamp="1588010425751">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1588004856652" />
+    <state width="1537" height="696" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1588010425751" />
     <state width="1537" height="457" key="GridCell.Tab.1.bottom" timestamp="1588004025536">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -402,10 +401,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="255" y="361" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1588003944924" />
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1588004018527">
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1588005021754">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1588004018527" />
+    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1588005021754" />
     <state width="624" height="700" key="XDebugger.FullValuePopup" timestamp="1587473446109">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -414,10 +413,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1616" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587123112521" />
-    <state x="-56" y="8" width="1292" height="1367" key="dock-window-1" timestamp="1588000332621">
+    <state x="314" y="27" width="1017" height="1376" key="dock-window-1" timestamp="1588010619860">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="-56" y="8" width="1292" height="1367" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1588000332621" />
+    <state x="314" y="27" width="1017" height="1376" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1588010619860" />
     <state x="983" y="17" width="1334" height="655" key="dock-window-2" timestamp="1587824734905">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
