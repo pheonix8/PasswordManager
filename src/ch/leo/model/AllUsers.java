@@ -1,19 +1,15 @@
 package ch.leo.model;
 
-import ch.leo.controller.ValidateSearch;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.SecureRandom;
-import java.util.Properties;
+
 import java.util.Vector;
 import java.util.stream.Stream;
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+
 
 
 /**
@@ -25,15 +21,15 @@ import javax.mail.internet.MimeMessage;
  */
 public class AllUsers {
 
-    private Vector<User> allUsers;
+    private final Vector<User> allUsers;
 
-    private String code = createCode();
+    private final String code = createCode();
 
     /**
      * Instantiates a new All users.
      */
     public AllUsers() {
-        allUsers = new Vector<User>();
+        allUsers = new Vector();
     }
 
     /**
@@ -112,45 +108,49 @@ public class AllUsers {
     }
 
     /**
-     * Send email.
      *
-     * @param i the
-     */
+     *
     public void sendEmail(int i) {
+     *
+     *final String username = "passw0rdmanager.host1@gmail.com";
+     *final String password = "psaaword1";
+     *
+     *Properties prop = new Properties();
+     *prop.put("mail.smtp.host", "smtp.gmail.com");
+     *prop.put("mail.smtp.port", "587");
+     *prop.put("mail.smtp.auth", "true");
+     *prop.put("mail.smtp.starttls.enable", "true");
+     *
+     *Session session = Session.getInstance(prop,
+                * new javax.mail.Authenticator() {
+     *
 
-        final String username = "passw0rdmanager.host1@gmail.com";
-        final String password = "psaaword1";
+            protected PasswordAuthentication getPasswordAuthentication() {
+     *return new PasswordAuthentication(username, password);
+     *}
+     *
+        });
+     *
+     *try {
+     *Message message = new MimeMessage(session);
+     *message.setFrom(new InternetAddress(username));
+     *message.setRecipients(Message.RecipientType.TO,
+                    * InternetAddress.parse(getElementAt(i).getEmail())
+                    *             );
+     *message.setSubject("Your Login Password");
+     *message.setText(code);
+     *
+     *Transport.send(message);
+     *
+     *System.out.println("Done");
+     *
+     *} catch (MessagingException e) {
+     *e.printStackTrace();
+     *}
+     *}
+     */
 
-        Properties prop = new Properties();
-        prop.put("mail.smtp.host", "smtp.gmail.com");
-        prop.put("mail.smtp.port", "587");
-        prop.put("mail.smtp.auth", "true");
-        prop.put("mail.smtp.starttls.enable", "true");
 
-        Session session = Session.getInstance(prop,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
-
-        try {
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(username));
-            message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(getElementAt(i).getEmail())
-            );
-            message.setSubject("Your Login Password");
-            message.setText(code);
-
-            Transport.send(message);
-
-            System.out.println("Done");
-
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * Create code string.

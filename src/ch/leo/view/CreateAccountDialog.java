@@ -1,16 +1,13 @@
 package ch.leo.view;
 
-import ch.leo.controller.EditDeleteController;
 import ch.leo.controller.LoginController;
 import ch.leo.model.AllCompilations;
 import ch.leo.model.AllUsers;
-import ch.leo.model.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Vector;
 
 /**
  * Project PasswordManager
@@ -20,9 +17,6 @@ import java.util.Vector;
  * @since 27.04.2020
  */
 public class CreateAccountDialog extends JDialog {
-
-    private AllUsers allUsers;
-    private AllCompilations allCompilations;
 
     private JPanel upperPanel;
     private JPanel lowerPanel;
@@ -47,9 +41,6 @@ public class CreateAccountDialog extends JDialog {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout(5, 5));
 
-        this.allUsers = allUsers;
-        this.allCompilations = allCompilations;
-
         upperPanel = new JPanel(new GridLayout(2, 2));
         lowerPanel = new JPanel();
 
@@ -70,6 +61,7 @@ public class CreateAccountDialog extends JDialog {
 
         init();
         setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     private void init() {

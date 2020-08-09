@@ -22,10 +22,6 @@ public class MyCellRenderer extends JPanel implements ListCellRenderer<Object> {
      * The Application name.
      */
     JTextField applicationName;
-    /**
-     * The Scroll pane.
-     */
-    JScrollPane scrollPane;
 
     /**
      * Instantiates a new My cell renderer.

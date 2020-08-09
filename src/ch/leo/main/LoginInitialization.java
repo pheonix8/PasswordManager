@@ -13,9 +13,6 @@ import ch.leo.model.Compilation;
  */
 public class LoginInitialization {
 
-    private AllUsers allUsers;
-    private AllCompilations allCompilations;
-
     /**
      * Instantiates a new Login initialization.
      *
@@ -23,8 +20,6 @@ public class LoginInitialization {
      * @param allCompilations the all compilations
      */
     public LoginInitialization(AllUsers allUsers, AllCompilations allCompilations) {
-        this.allUsers = allUsers;
-        this.allCompilations = allCompilations;
 
         allUsers.readfile();
 
@@ -53,6 +48,6 @@ public class LoginInitialization {
     public static void main(String[] args) {
         AllUsers au = new AllUsers();
         AllCompilations ac = new AllCompilations();
-        LoginInitialization li = new LoginInitialization(au, ac);
+        new LoginInitialization(au, ac);
     }
 }

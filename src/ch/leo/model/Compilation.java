@@ -1,9 +1,17 @@
 package ch.leo.model;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.*;
 import java.io.*;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Vector;
 import java.util.stream.Stream;
 
@@ -25,8 +33,8 @@ public class Compilation extends DefaultListModel<Application> {
      * @param name the name
      */
     public Compilation(String name) {
-        allApplications = new Vector<Application>();
-        selectedApplications = new Vector<Application>();
+        allApplications = new Vector();
+        selectedApplications = new Vector();
         selectedType = null;
         this.name = name;
     }
@@ -158,7 +166,6 @@ public class Compilation extends DefaultListModel<Application> {
 
     }
 
-
     /**
      * Savefile.
      */
@@ -205,5 +212,5 @@ public class Compilation extends DefaultListModel<Application> {
         }
 
     }
-
+    
 }

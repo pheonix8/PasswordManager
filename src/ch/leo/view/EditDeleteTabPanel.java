@@ -1,14 +1,11 @@
 package ch.leo.view;
 
 import ch.leo.controller.EditDeleteController;
-import ch.leo.controller.SearchController;
-import ch.leo.model.*;
+import ch.leo.model.Application;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 

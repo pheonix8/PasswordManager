@@ -2,9 +2,9 @@ package ch.leo.controller;
 
 import ch.leo.model.Application;
 import ch.leo.model.Compilation;
-import ch.leo.main.*;
 
 import javax.swing.*;
+import java.util.Objects;
 
 /**
  * Project PasswordManager
@@ -47,23 +47,35 @@ public class CreateController {
      * @param applicationModel the application model
      */
     public static void onApplicationAdded(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, JButton createButton, DefaultListModel<Application> applicationModel) {
-        Application newApplication = new Application(
-                appField.getText(),
-                userField.getText(),
-                passField.getText(),
-                emField.getText(),
-                programmType.getSelectedItem().toString());
 
-        applicationModel.addElement(newApplication);
-        ((Compilation) applicationModel).savefile();
 
-        passField.setText("");
-        userField.setText("");
-        appField.setText("");
-        emField.setText("");
-        programmType.setEnabled(false);
-        createButton.setEnabled(false);
 
+        boolean validated = Validate.validateNew(passField,userField,appField,emField);
+
+        if(validated){
+
+            Application newApplication = new Application(
+                    appField.getText(),
+                    userField.getText(),
+                    passField.getText(),
+                    emField.getText(),
+                    Objects.requireNonNull(programmType.getSelectedItem()).toString());
+
+            applicationModel.addElement(newApplication);
+            ((Compilation) applicationModel).savefile();
+
+            passField.setText("");
+            userField.setText("");
+            appField.setText("");
+            emField.setText("");
+            programmType.setEnabled(false);
+            createButton.setEnabled(false);
+
+        }else{
+            JOptionPane.showMessageDialog(null,"Es dürfen keine Kommas in einem Feld stehen!");
+            createButton.setEnabled(false);
+            passField.setText("");
+        }
     }
 
 

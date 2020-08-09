@@ -1,9 +1,6 @@
 package ch.leo.model;
 
 import javax.swing.*;
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.Vector;
 
 /**
@@ -21,7 +18,7 @@ public class Types extends DefaultComboBoxModel<String> {
      * Instantiates a new Types.
      */
     public Types() {
-        this.types = new Vector<String>();
+        this.types = new Vector();
     }
 
     /**

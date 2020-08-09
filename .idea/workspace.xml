@@ -26,7 +26,34 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="" />
+    <list default="true" id="ea74a13d-ff74-4f7e-b5ae-0a8d88e9efc4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/AllUsers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User/AllUsers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/activation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.ejb-api-3.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.mail.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/CreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/EditDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/controller/ValidateSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/controller/Validate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/DataInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/main/LoginInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/LoginInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/main/PasswordManagerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/AllCompilations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/AllCompilations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/AllUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/AllUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Compilation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/model/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/model/Types.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateAccountDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateAccountDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/CreateTabPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/DeleteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/DeleteDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDeleteTabPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/EditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/EditDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/MyCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/MyCellRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswordManagerLoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswordManagerLoginGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/PasswortmanagerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/leo/view/ShowPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/leo/view/ShowPassword.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +89,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../M120" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Facets" />
@@ -164,6 +191,24 @@
       <workItem from="1587969370888" duration="18147000" />
       <workItem from="1588004042424" duration="6200000" />
       <workItem from="1588010863070" duration="650000" />
+      <workItem from="1588011558145" duration="54000" />
+      <workItem from="1588252321054" duration="799000" />
+      <workItem from="1588597308140" duration="34000" />
+      <workItem from="1590672773158" duration="474000" />
+      <workItem from="1590673341756" duration="1203000" />
+      <workItem from="1592649861260" duration="33000" />
+      <workItem from="1592650164134" duration="112000" />
+      <workItem from="1593094961688" duration="1200000" />
+      <workItem from="1593248608478" duration="3329000" />
+      <workItem from="1593267366283" duration="12000" />
+      <workItem from="1593278804875" duration="12000" />
+      <workItem from="1593343607828" duration="1889000" />
+      <workItem from="1593427999961" duration="3520000" />
+      <workItem from="1593533395942" duration="618000" />
+      <workItem from="1593872981137" duration="2728000" />
+      <workItem from="1596884660144" duration="2328000" />
+      <workItem from="1596918632803" duration="17000" />
+      <workItem from="1596963174667" duration="9780000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit &#10;Model Classes &#10;one GUI">
       <created>1586772663658</created>
@@ -270,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588011504381</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fully Functional + java Doc + better initialisation&#10;*Email dont work&#10;*No encryption">
+      <created>1588011598832</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588011598832</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,137 +371,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fully Functional + java Doc + better initialisation&#10;*Email dont work&#10;*No encryption" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="358" key="#Project_Structure" timestamp="1587035420421">
+    <state x="1588" y="385" key="#com.intellij.ide.util.MemberChooser" timestamp="1596965896870">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="358" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1587035420421" />
-    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser" timestamp="1588005900180">
+    <state x="1588" y="385" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1596965896870" />
+    <state x="1129" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596964559512">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="524" y="420" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1588005900180" />
-    <state x="1449" y="389" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1587998977678">
+    <state x="1129" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1596964559512" />
+    <state x="534" y="461" key="FileChooserDialogImpl" timestamp="1596968087062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1449" y="389" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587998977678" />
-    <state x="1339" y="439" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587030538934">
+    <state x="534" y="461" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1596968087062" />
+    <state width="2517" height="698" key="GridCell.Tab.0.bottom" timestamp="1596988831319">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1339" y="439" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587030538934" />
-    <state x="1720" y="594" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587474352709">
+    <state width="2517" height="698" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1596988831319" />
+    <state width="2517" height="698" key="GridCell.Tab.0.center" timestamp="1596988831319">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1720" y="594" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400@0.0.2560.1400" timestamp="1587474352709" />
-    <state x="1667" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587555580337">
+    <state width="2517" height="698" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1596988831319" />
+    <state width="2517" height="698" key="GridCell.Tab.0.left" timestamp="1596988831319">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1667" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587555580337" />
-    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2" timestamp="1588011503985">
+    <state width="2517" height="698" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1596988831319" />
+    <state width="2517" height="698" key="GridCell.Tab.0.right" timestamp="1596988831319">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="702" y="296" width="899" height="863" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1588011503985" />
-    <state x="0" y="0" key="DiffContextDialog" timestamp="1587466666556">
+    <state width="2517" height="698" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1596988831319" />
+    <state width="1500" height="457" key="GridCell.Tab.1.bottom" timestamp="1596886989575">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="0" y="0" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587466666556" />
-    <state x="534" y="461" key="FileChooserDialogImpl" timestamp="1587995055462">
+    <state width="1500" height="457" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1596886989575" />
+    <state width="1500" height="457" key="GridCell.Tab.1.center" timestamp="1596886989575">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="534" y="461" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1587995055462" />
-    <state x="484" y="640" key="GitCloneDialog" timestamp="1586773071156">
+    <state width="1500" height="457" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1596886989575" />
+    <state width="1500" height="457" key="GridCell.Tab.1.left" timestamp="1596886989575">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="484" y="640" key="GitCloneDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586773071156" />
-    <state width="1537" height="696" key="GridCell.Tab.0.bottom" timestamp="1588011514136">
+    <state width="1500" height="457" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1596886989575" />
+    <state width="1500" height="457" key="GridCell.Tab.1.right" timestamp="1596886989575">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1588011514136" />
-    <state width="1537" height="696" key="GridCell.Tab.0.center" timestamp="1588011514135">
+    <state width="1500" height="457" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1596886989575" />
+    <state x="662" y="320" key="new project wizard" timestamp="1592649891569">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1588011514135" />
-    <state width="1537" height="696" key="GridCell.Tab.0.left" timestamp="1588011514135">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1588011514135" />
-    <state width="1537" height="696" key="GridCell.Tab.0.right" timestamp="1588011514135">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1537" height="696" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1588011514135" />
-    <state width="1537" height="457" key="GridCell.Tab.1.bottom" timestamp="1588004025536">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1537" height="457" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1588004025536" />
-    <state width="1537" height="457" key="GridCell.Tab.1.center" timestamp="1588004025535">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1537" height="457" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1588004025535" />
-    <state width="1537" height="457" key="GridCell.Tab.1.left" timestamp="1588004025535">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1537" height="457" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1588004025535" />
-    <state width="1537" height="457" key="GridCell.Tab.1.right" timestamp="1588004025536">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1537" height="457" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1588004025536" />
-    <state x="220" y="446" key="IDE.errors.dialog" timestamp="1587037950751">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="220" y="446" key="IDE.errors.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587037950751" />
-    <state x="419" y="418" key="NewModule_or_Project.wizard" timestamp="1586773095473">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="419" y="418" key="NewModule_or_Project.wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1586773095473" />
-    <state x="255" y="361" key="SettingsEditor" timestamp="1588003944924">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="255" y="361" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1588003944924" />
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2" timestamp="1588011506456">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1008" y="246" width="808" height="534" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1588011506456" />
-    <state width="624" height="700" key="XDebugger.FullValuePopup" timestamp="1587473446109">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="624" height="700" key="XDebugger.FullValuePopup/0.0.2560.1400@0.0.2560.1400" timestamp="1587473446109" />
-    <state x="1616" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1587123112521">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1616" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587123112521" />
-    <state x="314" y="27" width="1017" height="1376" key="dock-window-1" timestamp="1588010619860">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="314" y="27" width="1017" height="1376" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1588010619860" />
-    <state x="983" y="17" width="1334" height="655" key="dock-window-2" timestamp="1587824734905">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="983" y="17" width="1334" height="655" key="dock-window-2/0.0.2560.1400@0.0.2560.1400" timestamp="1587824734905" />
-    <state x="1175" y="0" width="992" height="911" key="dock-window-3" timestamp="1587571352753">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1175" y="0" width="992" height="911" key="dock-window-3/0.0.2560.1400@0.0.2560.1400" timestamp="1587571352753" />
-    <state x="1397" y="28" width="992" height="911" key="dock-window-4" timestamp="1587571352753">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1397" y="28" width="992" height="911" key="dock-window-4/0.0.2560.1400@0.0.2560.1400" timestamp="1587571352753" />
-    <state x="21" y="135" width="992" height="911" key="dock-window-5" timestamp="1587576419831">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="21" y="135" width="992" height="911" key="dock-window-5/0.0.2560.1400@0.0.2560.1400" timestamp="1587576419831" />
-    <state x="1262" y="43" width="1053" height="1356" key="dock-window-6" timestamp="1587575254945">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1262" y="43" width="1053" height="1356" key="dock-window-6/0.0.2560.1400@0.0.2560.1400" timestamp="1587575254945" />
-    <state x="1456" y="263" width="585" height="873" key="find.popup" timestamp="1587987817668">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1456" y="263" width="585" height="873" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1587987817668" />
-    <state x="662" y="320" key="new project wizard" timestamp="1587034733492">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="662" y="320" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1587034733492" />
-    <state x="417" y="338" width="672" height="678" key="search.everywhere.popup" timestamp="1588003742286">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="417" y="338" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1588003742286" />
+    <state x="662" y="320" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1592649891569" />
   </component>
 </project>

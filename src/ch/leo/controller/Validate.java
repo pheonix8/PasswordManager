@@ -3,6 +3,7 @@ package ch.leo.controller;
 import ch.leo.model.*;
 
 import javax.swing.*;
+import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,8 +14,7 @@ import java.util.regex.Pattern;
  * @version 0.1
  * @since 22.04.2020
  */
-public class ValidateSearch {
-
+public class Validate {
 
     /**
      * Validate search boolean.
@@ -29,8 +29,6 @@ public class ValidateSearch {
             if (applicationModel.getElementAt(i).getApplication().equalsIgnoreCase(searchField.getText())) {
                 validated = true;
                 break;
-            } else {
-                validated = false;
             }
         }
         return validated;
@@ -55,10 +53,6 @@ public class ValidateSearch {
     }
 
     /**
-     * Login
-     */
-
-    /**
      * Validate email boolean
      *
      * @param emailField the email field
@@ -68,9 +62,8 @@ public class ValidateSearch {
         Pattern p = Pattern.compile("\\b[\\w.%-]+@[-.\\w]+\\.[A-Za-z]{2,4}\\b");
         Matcher m = p.matcher(emailField.getText());
         System.out.println(m.matches());
-        boolean b = m.matches();
 
-        return b;
+        return m.matches();
     }
 
     /**
@@ -86,8 +79,6 @@ public class ValidateSearch {
             if (allUsers.getElementAt(i).getUsername().equalsIgnoreCase(userField.getText())) {
                 validated = true;
                 break;
-            } else {
-                validated = false;
             }
 
         }
@@ -107,8 +98,6 @@ public class ValidateSearch {
             if (allUsers.getCode().equalsIgnoreCase(passwordField.getText())) {
                 validated = true;
                 break;
-            } else {
-                validated = false;
             }
         }
         return validated;
@@ -130,6 +119,32 @@ public class ValidateSearch {
             }
         }
         return index;
+    }
+
+    public static boolean validateNew(JTextField passField, JTextField userField, JTextField appField, JTextField emField) {
+
+        boolean valitdated = true;
+        Pattern p = Pattern.compile("[,;]");
+        Vector<String> checks = new Vector<>();
+
+        checks.add(passField.getText());
+        checks.add(userField.getText());
+        checks.add(appField.getText());
+        checks.add(emField.getText());
+
+        for (int i = 0; i < checks.size(); i++) {
+
+            Matcher m = p.matcher(checks.elementAt(i));
+
+            if (m.matches()) {
+                valitdated = true;
+            } else {
+                valitdated = false;
+                break;
+            }
+        }
+
+        return valitdated;
     }
 
 

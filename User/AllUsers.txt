@@ -1,5 +1,2 @@
 guest,guest@gmail.ch
 leo,leo.oetterli@gmx.ch
-test,test.tst@test.ch
-test,test.test@gmx.ch
-test,test@gmx.ch

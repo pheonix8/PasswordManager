@@ -2,14 +2,13 @@ package ch.leo.controller;
 
 import ch.leo.main.DataInitialization;
 import ch.leo.main.LoginInitialization;
-import ch.leo.model.*;
+import ch.leo.model.AllCompilations;
+import ch.leo.model.AllUsers;
+import ch.leo.model.Types;
+import ch.leo.model.User;
 import ch.leo.view.CreateAccountDialog;
-import ch.leo.view.PasswordManagerLoginGUI;
-import ch.leo.view.PasswortmanagerGUI;
 
 import javax.swing.*;
-import java.awt.event.WindowEvent;
-import java.util.Vector;
 
 /**
  * Project PasswordManager
@@ -20,10 +19,6 @@ import java.util.Vector;
  */
 public class LoginController {
 
-    /**
-     * Login
-     */
-
 
     /**
      * on User Entered
@@ -33,24 +28,19 @@ public class LoginController {
      * @param requestpw the requestpw
      */
     public static void onUserEntered(JTextField userField, AllUsers allUsers, JButton requestpw) {
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
-        if (validateSearch.validateUser(userField, allUsers) == true) {
-            requestpw.setEnabled(true);
-        } else {
-            requestpw.setEnabled(false);
-        }
+        requestpw.setEnabled(validate.validateUser(userField, allUsers));
     }
 
     /**
      * On click request pw.
      *
-     * @param userField     the user field
      * @param allUsers      the all users
      * @param passwordField the password field
      */
-    public static void onClickRequestPW(JTextField userField, AllUsers allUsers, JTextField passwordField) {
-        ValidateSearch validateSearch = new ValidateSearch();
+    public static void onClickRequestPW(AllUsers allUsers, JTextField passwordField) {
+        new Validate();
 
         //Versuch Email zu senden Fehlgeschlagen
         //allUsers.sendEmail(validateSearch.getLoginIndex(userField,allUsers));
@@ -70,13 +60,9 @@ public class LoginController {
      * @param login        the login
      */
     public static void onPasswordEntered(JTextField passwodField, AllUsers allUsers, JButton login) {
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
-        if (validateSearch.validatePassword(passwodField, allUsers) == true) {
-            login.setEnabled(true);
-        } else {
-            login.setEnabled(false);
-        }
+        login.setEnabled(validate.validatePassword(passwodField, allUsers));
 
     }
 
@@ -90,7 +76,7 @@ public class LoginController {
         String name = userField.getText();
         Types types = new Types();
 
-        DataInitialization dataInitialization = new DataInitialization(allCompilations, types, name);
+        new DataInitialization(allCompilations, types, name);
 
     }
 
@@ -101,13 +87,8 @@ public class LoginController {
      * @param allCompilations the all compilations
      */
     public static void onClickCreateAccountWindow(AllUsers allUsers, AllCompilations allCompilations) {
-        CreateAccountDialog createAccountDialog = new CreateAccountDialog(allUsers,allCompilations);
+        new CreateAccountDialog(allUsers, allCompilations);
     }
-
-
-    /**
-     * Create Account
-     */
 
 
     /**
@@ -117,9 +98,9 @@ public class LoginController {
      * @param createButton the create button
      */
     public static void onDataEntered(JTextField emailField, JButton createButton) {
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
-        if (validateSearch.validateEmail(emailField) == true) {
+        if (validate.validateEmail(emailField)) {
             createButton.setEnabled(true);
         } else {
             createButton.setEnabled(false);
@@ -144,7 +125,7 @@ public class LoginController {
         allUsers.addUser(newUser);
         allUsers.createfile();
 
-        LoginInitialization loginInitialization = new LoginInitialization(allUsers, allCompilations);
+        new LoginInitialization(allUsers, allCompilations);
 
         userField.setText("");
         emailField.setText("");

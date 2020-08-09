@@ -1,16 +1,12 @@
 package ch.leo.view;
 
-import ch.leo.controller.EditDeleteController;
 import ch.leo.controller.LoginController;
 import ch.leo.model.AllCompilations;
 import ch.leo.model.AllUsers;
-import ch.leo.model.Application;
-import ch.leo.model.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Vector;
 
 /**
  * Project PasswordManager
@@ -64,7 +60,7 @@ public class PasswordManagerLoginGUI extends JFrame {
             }
         });
         requestButton = new JButton("Request PW");
-        requestButton.addActionListener(e -> LoginController.onClickRequestPW(userField, allUsers, passwordField));
+        requestButton.addActionListener(e -> LoginController.onClickRequestPW(allUsers, passwordField));
         requestButton.setEnabled(false);
 
         passwordLabel = new JLabel("Password:");
@@ -77,12 +73,9 @@ public class PasswordManagerLoginGUI extends JFrame {
         });
         loginButton = new JButton("Login");
         loginButton.setEnabled(false);
-        loginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                LoginController.onClickStart(allCompilations, userField);
-                setVisible(false);
-            }
+        loginButton.addActionListener(e -> {
+            LoginController.onClickStart(allCompilations, userField);
+            setVisible(false);
         });
 
         createAccountButton = new JButton("Create Account");
@@ -93,7 +86,8 @@ public class PasswordManagerLoginGUI extends JFrame {
         init();
         pack();
         setVisible(true);
-
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     private void init() {

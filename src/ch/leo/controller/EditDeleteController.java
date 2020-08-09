@@ -1,10 +1,12 @@
 package ch.leo.controller;
 
-import ch.leo.view.*;
-import ch.leo.model.*;
+import ch.leo.model.Application;
+import ch.leo.model.Compilation;
+import ch.leo.view.DeleteDialog;
+import ch.leo.view.EditDialog;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
+import java.util.Objects;
 
 /**
  * Project PasswordManager
@@ -22,7 +24,7 @@ public class EditDeleteController {
      * @param applicationModel the application model
      */
     public static void onTypeSelection(JComboBox<String> programmType, DefaultListModel<Application> applicationModel) {
-        ((Compilation) applicationModel).setSelectedType(programmType.getSelectedItem().toString());
+        ((Compilation) applicationModel).setSelectedType(Objects.requireNonNull(programmType.getSelectedItem()).toString());
     }
 
     /**
@@ -32,8 +34,7 @@ public class EditDeleteController {
      * @param applicationModel the application model
      */
     public static void onClickDeleteWindow(JTextField searchField, DefaultListModel<Application> applicationModel) {
-        String getValue;
-        DeleteDialog deleteDialog = new DeleteDialog(getValue = searchField.getText(), applicationModel);
+        new DeleteDialog(searchField.getText(), applicationModel);
     }
 
     /**
@@ -44,8 +45,7 @@ public class EditDeleteController {
      * @param applicationModel the application model
      */
     public static void onClickEditWindow(JTextField searchField, DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
-        String getValue;
-        EditDialog editDialog = new EditDialog(typeModel, getValue = searchField.getText(), applicationModel);
+        new EditDialog(typeModel, searchField.getText(), applicationModel);
     }
 
     /**
@@ -57,9 +57,9 @@ public class EditDeleteController {
      * @param editButton       the edit button
      */
     public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton deleteButton, JButton editButton) {
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
-        if (validateSearch.validateSearch(searchField, applicationModel) == true) {
+        if (validate.validateSearch(searchField, applicationModel)) {
             deleteButton.setEnabled(true);
             editButton.setEnabled(true);
         } else {
@@ -67,11 +67,6 @@ public class EditDeleteController {
             editButton.setEnabled(false);
         }
     }
-
-
-    /**
-     * Edit Delete Dialog
-     */
 
 
     /**
@@ -86,13 +81,13 @@ public class EditDeleteController {
      * @param title            the title
      */
     public static void onApplicationEdited(JTextField passField, JTextField userField, JTextField appField, JTextField emField, JComboBox<String> programmType, DefaultListModel<Application> applicationModel, String title) {
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
-        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setPassword(passField.getText());
-        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setUsername(userField.getText());
-        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setApplication(appField.getText());
-        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setEmail(emField.getText());
-        applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).setType(programmType.getSelectedItem().toString());
+        applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).setPassword(passField.getText());
+        applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).setUsername(userField.getText());
+        applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).setApplication(appField.getText());
+        applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).setEmail(emField.getText());
+        applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).setType(Objects.requireNonNull(programmType.getSelectedItem()).toString());
     }
 
     /**
@@ -102,9 +97,9 @@ public class EditDeleteController {
      * @param title            the title
      */
     public static void onApplicationDeleted(DefaultListModel<Application> applicationModel, String title) {
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
-        applicationModel.removeElement(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)));
+        applicationModel.removeElement(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)));
         ((Compilation) applicationModel).savefile();
     }
 

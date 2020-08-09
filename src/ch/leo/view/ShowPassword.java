@@ -1,6 +1,6 @@
 package ch.leo.view;
 
-import ch.leo.controller.ValidateSearch;
+import ch.leo.controller.Validate;
 import ch.leo.model.Application;
 
 import javax.swing.*;
@@ -39,16 +39,16 @@ public class ShowPassword extends JDialog {
         setSize(250, 125);
         setLayout(new BorderLayout(10, 10));
 
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
         usernameLabel = new JLabel("Username:");
-        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getUsername());
+        usernameField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getUsername());
 
         emailLabel = new JLabel("E-Mail:");
-        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getEmail());
+        emailField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getEmail());
 
         passwordLabel = new JLabel("Password:");
-        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getPassword());
+        passwordField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getPassword());
 
         usernameField.setEditable(false);
         emailField.setEditable(false);
@@ -57,6 +57,7 @@ public class ShowPassword extends JDialog {
         init();
 
         setVisible(true);
+        setLocationRelativeTo(null);
 
     }
 

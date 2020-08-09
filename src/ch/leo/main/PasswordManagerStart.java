@@ -1,10 +1,8 @@
 package ch.leo.main;
 
-import ch.leo.model.*;
-import ch.leo.view.*;
-
-import javax.swing.*;
-import java.util.Vector;
+import ch.leo.model.AllCompilations;
+import ch.leo.model.AllUsers;
+import ch.leo.view.PasswordManagerLoginGUI;
 
 
 /**
@@ -28,7 +26,7 @@ public class PasswordManagerStart {
 
         new LoginInitialization(au, ac);
 
-        PasswordManagerLoginGUI passwordManagerLoginGUI = new PasswordManagerLoginGUI(au, ac);
+        new PasswordManagerLoginGUI(au, ac);
 
     }
 }

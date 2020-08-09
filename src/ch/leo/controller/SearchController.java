@@ -5,7 +5,7 @@ import ch.leo.model.Compilation;
 import ch.leo.view.ShowPassword;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
+import java.util.Objects;
 
 /**
  * Project PasswordManager
@@ -23,7 +23,7 @@ public class SearchController {
      * @param applicationModel the application model
      */
     public static void onTypeSelection(JComboBox<String> programmType, DefaultListModel<Application> applicationModel) {
-        ((Compilation) applicationModel).setSelectedType(programmType.getSelectedItem().toString());
+        ((Compilation) applicationModel).setSelectedType(Objects.requireNonNull(programmType.getSelectedItem()).toString());
     }
 
     /**
@@ -33,8 +33,7 @@ public class SearchController {
      * @param applicationModel the application model
      */
     public static void onClickShowOpen(JTextField searchField, DefaultListModel<Application> applicationModel) {
-        String getValue;
-        ShowPassword showPassword = new ShowPassword(getValue = searchField.getText(), applicationModel);
+        new ShowPassword(searchField.getText(), applicationModel);
     }
 
     /**
@@ -45,8 +44,8 @@ public class SearchController {
      * @param searchButton     the search button
      */
     public static void onDataEntered(JTextField searchField, DefaultListModel<Application> applicationModel, JButton searchButton) {
-        ValidateSearch validateSearch = new ValidateSearch();
-        if (validateSearch.validateSearch(searchField, applicationModel) == true) {
+        Validate validate = new Validate();
+        if (validate.validateSearch(searchField, applicationModel)) {
             searchButton.setEnabled(true);
         } else {
             searchButton.setEnabled(false);

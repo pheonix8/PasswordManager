@@ -12,9 +12,6 @@ import ch.leo.view.PasswortmanagerGUI;
  */
 public class DataInitialization {
 
-    private Compilation compilation;
-    private Types types;
-
     /**
      * Instantiates a new Data initialization.
      *
@@ -23,8 +20,7 @@ public class DataInitialization {
      * @param name            the name
      */
     public DataInitialization(AllCompilations allCompilations, Types types, String name) {
-        compilation = allCompilations.getElementbyname(name);
-        this.types = types;
+        Compilation compilation = allCompilations.getElementbyname(name);
 
         types.addType("Gamelauncher");
         types.addType("Mail");
@@ -34,7 +30,7 @@ public class DataInitialization {
 
         compilation.readfile();
 
-        PasswortmanagerGUI passwortmanagerGUI = new PasswortmanagerGUI(compilation,types);
+        new PasswortmanagerGUI(compilation, types);
 
     }
 

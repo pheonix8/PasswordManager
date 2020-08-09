@@ -1,7 +1,6 @@
 package ch.leo.view;
 
 import ch.leo.controller.EditDeleteController;
-import ch.leo.controller.ValidateSearch;
 import ch.leo.model.Application;
 
 import javax.swing.*;
@@ -40,17 +39,11 @@ public class DeleteDialog extends JDialog {
         noButton = new JButton("No");
         yesButton = new JButton("Yes");
 
-        noButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        noButton.addActionListener(e -> dispose());
 
-        yesButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                EditDeleteController.onApplicationDeleted(applicationModel, title);
-                dispose();
-            }
+        yesButton.addActionListener(e -> {
+            EditDeleteController.onApplicationDeleted(applicationModel, title);
+            dispose();
         });
 
         setLayout(new BorderLayout(10, 10));
@@ -61,6 +54,7 @@ public class DeleteDialog extends JDialog {
         buttonPanel.add(yesButton, BorderLayout.EAST);
 
         setVisible(true);
+        setLocationRelativeTo(null);
 
     }
 }

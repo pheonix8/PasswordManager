@@ -2,8 +2,17 @@ package ch.leo.view;
 
 import ch.leo.model.*;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.IOException;
+import java.net.URL;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Project Password_Manager
@@ -31,10 +40,11 @@ public class PasswortmanagerGUI extends JFrame {
     public PasswortmanagerGUI(DefaultListModel<Application> applicationModel, DefaultComboBoxModel<String> typeModel) {
 
         super("Passwordmanager");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.applicationModel = applicationModel;
         this.typeModel = typeModel;
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         tabs = new JTabbedPane();
         initSearchTab(this.typeModel, this.applicationModel);
@@ -46,8 +56,9 @@ public class PasswortmanagerGUI extends JFrame {
 
         pack();
         setVisible(true);
-
+        setLocationRelativeTo(null);
     }
+
 
     private void initEditDeleteTab(DefaultComboBoxModel<String> typeModel, DefaultListModel<Application> applicationModel) {
         editDeleteTab = new EditDeleteTabPanel(typeModel, applicationModel);

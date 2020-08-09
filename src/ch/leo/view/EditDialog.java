@@ -1,13 +1,11 @@
 package ch.leo.view;
 
 import ch.leo.controller.EditDeleteController;
-import ch.leo.controller.ValidateSearch;
+import ch.leo.controller.Validate;
 import ch.leo.model.Application;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Project PasswordManager
@@ -54,51 +52,46 @@ public class EditDialog extends JDialog {
 
         this.typeModel = typeModel;
 
-        ValidateSearch validateSearch = new ValidateSearch();
+        Validate validate = new Validate();
 
         programmType = new JComboBox<String>(this.typeModel);
         programmType.setEditable(false);
         programmType.setPreferredSize(new Dimension(150, programmType.getPreferredSize().height));
-        programmType.setSelectedItem(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getType());
+        programmType.setSelectedItem(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getType());
 
         applicationLabel = new JLabel("Application:");
-        applicationField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getApplication());
+        applicationField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getApplication());
 
         usernameLabel = new JLabel("Username:");
-        usernameField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getUsername());
+        usernameField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getUsername());
 
         emailLabel = new JLabel("E-Mail:");
-        emailField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getEmail());
+        emailField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getEmail());
 
         passwordLabel = new JLabel("Password:");
-        passwordField = new JTextField(applicationModel.getElementAt(validateSearch.getValidatedIndex(title, applicationModel)).getPassword());
+        passwordField = new JTextField(applicationModel.getElementAt(validate.getValidatedIndex(title, applicationModel)).getPassword());
 
         saveButton = new JButton("Save");
         cancelButton = new JButton("Cancel");
 
-        cancelButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        cancelButton.addActionListener(e -> dispose());
 
-        saveButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                EditDeleteController.onApplicationEdited(
-                        passwordField,
-                        usernameField,
-                        applicationField,
-                        emailField, programmType,
-                        applicationModel,
-                        title);
-                dispose();
-            }
+        saveButton.addActionListener(e -> {
+            EditDeleteController.onApplicationEdited(
+                    passwordField,
+                    usernameField,
+                    applicationField,
+                    emailField, programmType,
+                    applicationModel,
+                    title);
+            dispose();
         });
 
         add(editUpperPanel(), BorderLayout.CENTER);
         add(editLowerPanel(), BorderLayout.SOUTH);
 
         setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     private JPanel editUpperPanel() {

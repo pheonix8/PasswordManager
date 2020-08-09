@@ -11,13 +11,13 @@ import java.util.Vector;
  */
 public class AllCompilations {
 
-    private Vector<Compilation> allCompilations;
+    private final Vector<Compilation> allCompilations;
 
     /**
      * Instantiates a new All compilations.
      */
     public AllCompilations() {
-        allCompilations = new Vector<Compilation>();
+        allCompilations = new Vector();
     }
 
     /**
